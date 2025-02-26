@@ -1,0 +1,1 @@
+# wisenetic-odoo-addons
