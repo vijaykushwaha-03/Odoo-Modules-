@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="ir_cron_wt_low_stock_notification" model="ir.cron">
+            <field name="name">Low Stock Notification</field>
+            <field name="model_id" ref="product.model_product_template"/>  
+            <field name="state">code</field>
+            <field name="code">model._cron_low_stock_notification()</field>
+            <field name="user_id" ref="base.user_admin"/>   
+            <field name="active" eval="True"/>
+            <field name="interval_number">1</field>   
+            <field name="interval_type">minutes</field>
+            <field name="nextcall" eval="(datetime.now()).strftime('%Y-%m-%d %H:%M:%S')"/>
+ 
+         </record>
+    </data>
+</odoo>

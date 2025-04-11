@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+
+        <!-- LIST VIEW EXTENSION -->
+        <record id="view_warehouse_orderpoint_tree_editable_nherit_wt_low_stock_notification"
+            model="ir.ui.view">
+            <field name="name">
+                view.warehouse.orderpoint.tree.editable.inherit.wt.low.stock.notification</field>
+            <field name="model">stock.warehouse.orderpoint</field>
+            <field name="inherit_id" ref="stock.view_warehouse_orderpoint_tree_editable" />
+            <field name="arch" type="xml">
+                <xpath expr="//list" position="inside">
+                    <field name="alert_state" invisible="1" />
+                </xpath>
+                <xpath expr="//list" position="attributes">
+                    <attribute name="decoration-danger">alert_state</attribute>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- KANBAN VIEW EXTENSION -->
+        <record id="view_stock_warehouse_orderpoint_kanban_inherit_wt_low_stock_notification"
+            model="ir.ui.view">
+            <field name="name">stock.warehouse.orderpoint.kanban.inherit.wt.low.stock.notification</field>
+            <field name="model">stock.warehouse.orderpoint</field>
+            <field name="inherit_id" ref="stock.view_stock_warehouse_orderpoint_kanban" />
+            <field name="arch" type="xml">
+                <xpath expr="//kanban" position="inside">
+                    <field name="alert_state" />
+                </xpath>
+                <xpath expr="//t[@t-name='card']" position="replace">
+                    <t t-name="card">
+                        <div  
+                            t-attf-style="{{ record.alert_state.raw_value and 'background-color: #fdc6c673;' or '' }}">
+                            <div class="d-flex">
+                                <field name="name" class="fw-bold fs-5 mb-1" />
+                                <span class="badge rounded-pill ms-auto mt-1">
+                                    <strong>Min qty:</strong>
+                                    <field name="product_min_qty" />
+                                </span>
+                            </div>
+                            
+                            <footer class="pt-0 mt-auto d-flex">
+                                <field name="product_id" />
+                                <span class="badge rounded-pill ms-auto">
+                                    <strong>Max qty:</strong>
+                                    <field name="product_max_qty" />
+                                </span>
+                            </footer>
+                         
+                        </div>
+                    </t>
+                </xpath>
+            </field>
+        </record>
+
+
+    </data>
+</odoo>

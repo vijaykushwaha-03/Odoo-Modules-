@@ -1,0 +1,47 @@
+<odoo>
+    <record id="res_config_settings_view_form_inherit_wt_low_stock_notification" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.wt.low.stock.notification</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="stock.res_config_settings_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//block[@name='product_setting_container']" position="inside">
+
+                <setting id="low_stock_notification"
+                    title="Enable Low Stock Notifications"
+                    help="Receive alerts when stock is low. Configure quantity types and checks to manage notifications.">
+
+                    <field name="low_stock_alert" />
+
+                    <div class="row mt-2" invisible="not low_stock_alert">
+                        <div>
+                            <label style="" for="quantity_type">Select Quantity Type</label>
+                            <field style="margin-left: 2%; width: 23%;" name="quantity_type"
+                                widget="selection" />
+                        </div>
+                    </div>
+                    <div class="d-flex mt-2" invisible="not low_stock_alert">
+                        <div class="row">
+                            <label for="product_quantity_check">Product Quantity Check</label>
+                            <div class="mt-1">
+                                <field class="oe_inline" style="width: 55%;"
+                                    name="product_quantity_check" widget="selection" />
+                            </div>
+                        </div>
+                        <div invisible="not show_minimum_quantity">
+                            <label for="minimum_quantity">Minimum Quantity</label>
+                            <div>
+                                <field name="minimum_quantity" />
+                            </div>
+                        </div>
+                    </div>
+
+
+                </setting>
+
+            </xpath>
+
+
+        </field>
+    </record>
+</odoo>
+ 
