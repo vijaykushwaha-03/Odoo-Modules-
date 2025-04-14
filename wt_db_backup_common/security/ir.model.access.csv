@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+wt_db_backup_common.access_db_local_backup,access_db_local_backup,model_db_local_backup,base.group_user,1,1,1,1

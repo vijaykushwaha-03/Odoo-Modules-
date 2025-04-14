@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="wt_email_template_gdrive_backup_success" model="mail.template">
+            <field name="name">Email Template Gdrive Backup Success</field>
+            <field name="model_id" ref="wt_db_backup_gdrive.model_gdrive_backup"/>            
+            <field name="email_to">{{ (ctx.get('recipient_email')) }}</field>            
+            <field name="subject">Database Backup Success - {{ (ctx.get('file_name')) }}</field>
+            <field name="body_html">
+                <![CDATA[
+                <div style="margin: 0px; padding: 0px;">
+                    <p style="font-size: 22px;">
+                        Dear Sir/Medam,
+                    </p>
+                    <p>
+                        The database backup has been successfully uploaded to Google Drive.
+                    </p>
+                    <p style="margin-left: 20px;">
+                        <b>Backup File:</b> 
+                        <span style="color: #007bff; font-weight: bold;">
+                            <t t-out="ctx.get('file_name') or ''"></t>
+                        </span>
+                    </p>
+                    <p style="margin-left: 20px;">
+                        <b>Google Drive File ID:</b> 
+                        <span style="color: #007bff; font-weight: bold;">
+                            <t t-out="ctx.get('file_id') or ''"></t>
+                        </span>
+                    </p>
+                    <p>
+                        Regards,
+                    </p>
+                    <p>
+                        Your Company
+                    </p>
+                </div>
+                ]]>
+            </field>           
+        </record>
+
+        <record id="wt_email_template_gdrive_backup_fail" model="mail.template">
+            <field name="name">Email Template Gdrive Backup Fail</field>
+            <field name="model_id" ref="wt_db_backup_gdrive.model_gdrive_backup"/>
+            <field name="email_to">{{ (ctx.get('recipient_email')) }}</field>
+            <field name="subject">Database Backup Failed</field>
+            <field name="body_html">
+                <![CDATA[
+                <div style="margin: 0px; padding: 0px;">
+                    <p style="font-size: 22px;">
+                        Dear Sir/Madam,
+                    </p>
+                    <p>
+                        The database backup to Google Drive has failed.
+                    </p>
+                    <p style="margin-left: 20px;">
+                        <b>Error Message:</b> 
+                        <span style="color: #dc3545; font-weight: bold;">
+                            <t t-out="ctx.get('error_message') or 'No error details available'"></t>
+                        </span>
+                    </p>
+                    <p>
+                        Please check the system logs and try again.
+                    </p>
+                    <p>
+                        Regards,
+                    </p>
+                    <p>
+                        Your Company
+                    </p>
+                </div>
+                ]]>
+            </field>           
+        </record>
+    </data>
+</odoo>

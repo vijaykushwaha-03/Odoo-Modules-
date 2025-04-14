@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="wt_res_config_settings_view_form_db_backup_grive" model="ir.ui.view">
+        <field name="name">wt.res.config.settings.view.form.db.backup.gdrive</field>
+        <field name="model">res.config.settings</field>
+        <field name="priority" eval="100"/>
+        <field name="inherit_id" ref="wt_db_backup_common.wt_res_config_settings_view_form_db_backup"/>
+        <field name="arch" type="xml">
+            <xpath expr="//app[@name='database_backup']" position="inside">
+                <block title="Google Drive Backup" name="gdrive_backup">
+                    <setting id="wt_gdrive_backup_enabled" string="Enable Google Drive Backup">                        
+                        <field name="gdrive_backup_enabled"/>
+                        <div class="content-group"
+                            invisible="not gdrive_backup_enabled"
+                            id="gdrive_backup_settings">
+                            <div class="row">
+                                <div class="col-4 col-lg-6">
+                                    <label string="Backup Frequency" for="backup_frequency" class="o_form_label col-4 col-lg-9 o_light_label"/>                                        
+                                </div>
+                                <field name="gdrive_backup_frequency" nolabel="1"/>
+                            </div>
+                            <div class="row">
+                                <div class="col-4 col-lg-6">
+                                    <label string="Backup Time" for="backup_time" class="o_form_label col-4 col-lg-9 o_light_label"/>                                        
+                                </div>
+                                <field name="gdrive_backup_time" nolabel="1"/>
+                            </div>
+                            <div class="row">
+                                <div class="col-4 col-lg-6">
+                                    <label string="Backup Format" for="gdrive_backup_format" class="o_form_label col-4 col-lg-9 o_light_label"/>                                        
+                                </div>
+                                <field name="gdrive_backup_format" nolabel="1"/>
+                            </div>
+                            <div class="row mt-2">
+                                <div class="col-4 col-lg-6">
+                                    <label for="notify_user" class="o_form_label o_light_label">Notify User</label>
+                                    <div class="fa fa-question-circle" title="Send an email notification to user when the backup operation is successful or failed"/>
+                                </div>
+                                <div class="col-8 col-lg-6">
+                                    <field name="notify_user"/>
+                                </div>
+                            </div>                            
+                            <div class="row" invisible="not notify_user" style="padding-top:6px">
+                                <div class="col-4 col-lg-6">
+                                    <label for="email_notification" class="o_form_label o_light_label">Notification Email</label>
+                                    <div class="fa fa-question-circle" title="Set an email to receive notifications when the backup operation is successful or fails."/>
+                                </div>                                
+                                <field name="email_notification" nolabel="1" required="notify_user"/>                                
+                            </div>
+                        </div>
+                    </setting>                  
+
+                    <!-- Google Drive API Credentials Section -->
+                    <setting id="wt_gdrive_credentials" invisible="not gdrive_backup_enabled">                        
+                        <div class="row">
+                            <div class="col-12">
+                                <h2 class="text-center">Google Drive API Credentials</h2>
+                            </div>
+                        </div>
+                        <br/>
+                        <div class="row">
+                            <div class="col-4 col-lg-6">
+                                <label string="Google Client ID" for="gdrive_client_id" class="o_form_label col-4 col-lg-9 o_light_label"/>
+                            </div>
+                            <field name="gdrive_client_id" placeholder="Enter Client ID" required="gdrive_backup_enabled"/>
+                        </div>
+                        <div class="row">
+                            <div class="col-4 col-lg-6">
+                                <label string="Google Client Secret" for="gdrive_client_secret" class="o_form_label col-4 col-lg-9 o_light_label"/>
+                            </div>
+                            <field name="gdrive_client_secret" placeholder="Enter Client Secret" required="gdrive_backup_enabled"/>
+                        </div>
+                        <div class="text-muted mt4">
+                            <small>Generate the authentication code from the <strong>Authenticate with Google</strong> link.</small>
+                        </div>
+                        <div class="mt8">
+                            <button name="action_get_gdrive_auth_code" type="object" string="Authenticate with Google" icon="oi-arrow-right" class="btn-link"/>
+                        </div>
+                        <br/>
+                        <div class="row">
+                            <div class="col-4 col-lg-6">
+                                <label string="Google Drive Folder ID" for="gdrive_folder_id" class="o_form_label col-4 col-lg-9 o_light_label"/>
+                            </div>
+                            <field name="gdrive_folder_id" placeholder="Enter Folder ID" required="gdrive_backup_enabled"/>
+                        </div>                            
+                    </setting>
+                </block>            
+            </xpath>
+        </field>
+    </record>
+</odoo>

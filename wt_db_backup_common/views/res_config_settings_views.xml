@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="wt_res_config_settings_view_form_db_backup" model="ir.ui.view">
+        <field name="name">wt.res.config.settings.view.form.db.backup</field>
+        <field name="model">res.config.settings</field>
+        <field name="priority" eval="100"/>
+        <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form" position="inside">
+                <app data-string="Backup" string="Database Backup" name="database_backup" groups="base.group_system">
+
+                    <block title="Backup Directory Path" name="db_backup_directory_path">
+                        <setting id="wt_db_backup_directory_path">
+                            <div class="content-group" id="database_backup_directory_path">
+                                <div class="row">
+                                    <div class="col-4 col-lg-6">
+                                        <label string="Backup Directory Path" for="local_backup_path" class="o_form_label col-4 col-lg-9 o_light_label"/>
+                                        <div class="fa fa-question-circle" title="Specify the directory where local backups will be stored. For example, '/home/odoo/backups'. "/>
+                                    </div>
+                                    <field name="local_backup_path" nolabel="1"/>
+                                </div>
+                            </div>
+                        </setting>
+                    </block>
+
+                    <block title="Local Backup" name="local_backup">
+                        <setting id="wt_local_backup_enabled" string="Enable Local Backup">                        
+                            <field name="local_backup_enabled"/>
+                            <div class="content-group"
+                                invisible="not local_backup_enabled"
+                                id="local_backup_settings">
+                                <div class="row">
+                                    <div class="col-4 col-lg-6">
+                                        <label string="Backup Frequency" for="backup_frequency" class="o_form_label col-4 col-lg-9 o_light_label"/>                                        
+                                    </div>
+                                    <field name="backup_frequency" nolabel="1"/>
+                                </div>
+                                <div class="row">
+                                    <div class="col-4 col-lg-6">
+                                        <label string="Backup Time" for="backup_time" class="o_form_label col-4 col-lg-9 o_light_label"/>                                        
+                                    </div>
+                                    <field name="backup_time" nolabel="1"/>
+                                </div> 
+                                <div class="row">
+                                    <div class="col-4 col-lg-6">
+                                        <label string="Backup Format" for="backup_format" class="o_form_label col-4 col-lg-9 o_light_label"/>                                        
+                                    </div>
+                                    <field name="backup_format" nolabel="1"/>
+                                </div>                                                              
+                            </div>
+                        </setting>
+                    </block>      
+
+                </app>
+            </xpath>
+        </field>
+    </record>
+</odoo>
