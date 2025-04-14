@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="res_config_settings_view_form" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.base.setup</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//block[@name='languages_setting_container']" position="after">
+                <block title="Follower Configuration" id="disable_followers_settings_container">
+                    <setting id="disable_followers" help="Enable Disable the followers list">
+                        <field name="disable_adding_followers_list"/>
+                        <div class="disable-followers-option" invisible="not disable_adding_followers_list">
+                            <field name="disable_follower_option" class="o_light_label" widget="radio" options="{'horizontal': true}"/>
+                            <div class="option-chatter" invisible="disable_follower_option != 'chatter'">
+                                <button name="%(action_manage_chatter_menu)d" icon="oi-arrow-right" type="action" string="Manage Chatter Followers" class="btn-link"/>
+                            </div>
+                        </div>
+                    </setting>
+                </block>
+            </xpath>
+        </field>
+    </record>
+</odoo>
