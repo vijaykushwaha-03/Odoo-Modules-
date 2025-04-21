@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-inherit="point_of_sale.SaverScreen" t-inherit-mode="extension">
+        <xpath expr="//div[hasclass('flex-grow-1')]" position="replace">
+            <div class="flex-grow-1 d-flex h-100 w-100 justify-content-center align-items-center">
+                <t t-if="props.config.enable_pos_logo">
+                    <img t-att-height="env.isSmall ? 40 : 182" t-att-src="'/web/binary/pos_logo'" alt="Logo"/>
+                </t>
+                <t t-else="">
+                    <img t-att-height="env.isSmall ? 40 : 182" src="/web/static/img/odoo_logo.svg" alt="Logo"/>
+                </t>
+            </div>
+        </xpath>
+    </t>
+</templates>
