@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <data>
+    <record id="group_mass_assign_backdate" model="res.groups">
+      <field name="name">Mass Assign Backdate(Sale)</field>
+    </record>
+  </data>
+</odoo>
+
+

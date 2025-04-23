@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_sale_order_all,sale_order_all,sale.model_sale_order,base.group_user,1,1,1,1
+access_sale_order_backdate_wizard,sale.order.backdate.wizard,model_sale_order_backdate_wizard,base.group_user,1,1,1,0
+

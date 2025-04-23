@@ -1,0 +1,26 @@
+<odoo>
+    <record id="view_sale_order_backdate_wizard" model="ir.ui.view">
+        <field name="name">sale.order.backdate.wizard</field>
+        <field name="model">sale.order.backdate.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Assign Backdate">
+                <group>
+                    <field name="date_order"/>
+                    <field name="remark"/>
+                </group>
+                <footer>
+                    <button name="action_confirm" string="Confirm" type="object" class="btn-primary"/>
+                    <button string="Cancel" special="cancel" class="btn-secondary"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+    <record id="action_open_backdate_wizard" model="ir.actions.act_window">
+            <field name="name">Mass Assign Backdate</field>
+            <field name="res_model">sale.order.backdate.wizard</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+            
+    </record>
+
+</odoo>
