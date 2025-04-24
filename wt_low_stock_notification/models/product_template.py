@@ -1,64 +1,92 @@
 from odoo import models, fields, api
 
+
 class ProductTemplate(models.Model):
     _inherit = "product.template"
 
-    minimum_product_quantity = fields.Float(string="Minimum Quantity",digits=(16, 2), store="True")
-    show_minimum_qty = fields.Boolean(compute="_compute_show_minimum_qty")
+    minimum_quantity = fields.Float(string="Minimum Quantity", default=0.0)
+    minimum_quantity_compute = fields.Float(
+        string="Minimum Quantity Compute", compute='_compute_minimum_quantity', default=0.0)
+    is_low_stock = fields.Boolean(
+        string='Low Stock', compute='_compute_is_low_stock', store=True)
+    required_quantity = fields.Float(
+        string="Required Quantity", compute='_compute_required_quantity', default=0.0)
+    highlight_color = fields.Integer(
+        compute='_compute_highlight_color',
+        store=False
+    )
 
-    """ Low Stock Product Alert  """
-    alert_state = fields.Boolean(string='Product Alert State',
-                                 compute='_compute_alert_state',
-                                 help='This field represents the alert state'
-                                      'of the product')
-    color_field = fields.Char(string='Background color',
-                              help='This field represents the background '
-                                   'color of the product.')
+    def _compute_highlight_color(self):
+        for rec in self:
+            if rec.is_low_stock:
+                rec.highlight_color = 2
+            else:
+                rec.highlight_color = 0
 
-   
-    @api.depends_context('company')
-    def _compute_show_minimum_qty(self):
-        """Show 'minimum_product_quantity' only when low_stock_alert is enabled AND product_quantity_check is 'individual'."""
+    def _compute_minimum_quantity(self):
         config = self.env['ir.config_parameter'].sudo()
-        product_quantity_check = config.get_param('wt_low_stock_notification.product_quantity_check', '')
+        low_stock_notification_enabled = config.get_param(
+            'wt_low_stock_notification.low_stock_notification_enabled')
+        product_quantity_check = config.get_param(
+            'wt_low_stock_notification.product_quantity_check')
+        minimum_quantity = float(config.get_param(
+            'wt_low_stock_notification.minimum_quantity'))
+        for rec in self:
+            if low_stock_notification_enabled and rec.type == 'consu':
+                if product_quantity_check == 'global':
+                    rec.minimum_quantity_compute = minimum_quantity
+                elif product_quantity_check == 'individual':
+                    rec.minimum_quantity_compute = rec.minimum_quantity
+                else:
+                    # TODO: Check record rule
+                    rec.minimum_quantity_compute = 100.00
 
-        for record in self:
-            record.show_minimum_qty = (
-                product_quantity_check == 'individual' 
-            )
-
-    @api.depends('qty_available', 'virtual_available', 'minimum_product_quantity')
-    def _compute_alert_state(self):
-        """Compute alert state dynamically based on selected quantity_type and config."""
+    def _compute_required_quantity(self):
         config = self.env['ir.config_parameter'].sudo()
-        stock_alert_enabled = config.get_param('wt_low_stock_notification.low_stock_alert') == 'True'
-        quantity_type = config.get_param('wt_low_stock_notification.quantity_type')
-        product_quantity_check = config.get_param('wt_low_stock_notification.product_quantity_check')
-        global_min_qty = float(config.get_param('wt_low_stock_notification.minimum_quantity', default='0'))
+        low_stock_notification_enabled = config.get_param(
+            'wt_low_stock_notification.low_stock_notification_enabled')
 
         for rec in self:
-            rec.alert_state = False
-            rec.color_field = 'white'
+            if low_stock_notification_enabled and rec.type == 'consu':
+                current_qty = rec.get_current_quantity()
+                required_quantity = rec.minimum_quantity_compute - current_qty
+                rec.required_quantity = required_quantity if required_quantity > 0 else 0
 
-            if not stock_alert_enabled or rec.type != 'consu':
-                continue
+    @api.depends('qty_available', 'virtual_available', 'minimum_quantity')
+    def _compute_is_low_stock(self):
+        config = self.env['ir.config_parameter'].sudo()
+        low_stock_notification_enabled = config.get_param(
+            'wt_low_stock_notification.low_stock_notification_enabled')
+        for rec in self:
+            if low_stock_notification_enabled and rec.type == 'consu':
+                current_qty = rec.get_current_quantity()
+                rec.is_low_stock = current_qty <= rec.minimum_quantity_compute
+            else:
+                rec.is_low_stock = False
 
-            # Determine current stock qty based on configuration
-            current_qty = 0.0
-            if quantity_type == 'onhand_qty':
-                current_qty = rec.qty_available
-            elif quantity_type == 'forecast_qty':
-                current_qty = rec.virtual_available
+    def get_current_quantity(self):
+        config = self.env['ir.config_parameter'].sudo()
+        quantity_type = config.get_param(
+            'wt_low_stock_notification.quantity_type')
+        return self.qty_available if quantity_type == 'onhand_qty' else self.virtual_available
 
-            # GLOBAL: compare against global config minimum
-            if product_quantity_check == 'global' and global_min_qty > 0:
-                if current_qty <= global_min_qty:
-                    rec.alert_state = True
-                    rec.color_field = '#fdc6c673'
+    def get_low_stock_product(self):
+        return self.search([
+            ('is_low_stock', '=', True),
+            '|',
+            ('company_id', '=', self.env.company.id),
+            ('company_id', '=', False)
+        ])
 
-            # INDIVIDUAL: compare against product-specific minimum
-            elif product_quantity_check == 'individual' and rec.minimum_product_quantity > 0:
-                if current_qty <= rec.minimum_product_quantity:
-                    rec.alert_state = True
-                    rec.color_field = '#fdc6c673'
-     
+    def _send_low_stock_notification_email(self):
+        config = self.env['ir.config_parameter'].sudo()
+        mail_template = self.env.ref(
+            'wt_low_stock_notification.low_stock_notification_email_template')
+        low_stock_notification_enabled = config.get_param(
+            'wt_low_stock_notification.low_stock_notification_enabled')
+        low_stock_products = self.get_low_stock_product()
+        if mail_template and low_stock_notification_enabled and low_stock_products:
+            mail_template.sudo().send_mail(
+                self.id,
+                force_send=True
+            )

@@ -1,16 +1,14 @@
 <?xml version='1.0' encoding='utf-8'?>
 <odoo>
     <data>
-        <!--Inherit
-        product.product_template_form_view and  ADD minimum_product_quantity IN UNDER
-         PRODUCT PAGE GENRALINFORMATION SECTION  -->
         <record id="product_template_form_view_inherit_wt_low_stock_notification" model="ir.ui.view">
             <field name="name">product.template.form.view.inherit.wt.low.stock.notification</field>
             <field name="model">product.template</field>
             <field name="inherit_id" ref="product.product_template_form_view" />
             <field name="arch" type="xml">
                 <xpath expr="//group/field[@name='categ_id']" position="after">
-                    <field name="minimum_product_quantity" invisible="not show_minimum_qty"></field>
+                    <field name="minimum_quantity"/>
+                    <field name="is_low_stock"/>
                 </xpath>
             </field>
         </record>

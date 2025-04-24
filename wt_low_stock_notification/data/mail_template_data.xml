@@ -1,0 +1,54 @@
+<?xml version="1.0" ?>
+<odoo>
+    <data>
+        <record id="low_stock_notification_email_template" model="mail.template">
+            <field name="name">Low Stock Notification</field>
+            <field name="model_id" ref="product.model_product_template" />
+            <field name="subject">Low Stock Alert</field>
+            <field name="email_from">odoobot@example.com</field>
+            <field name="email_to"></field>
+            <field name="auto_delete" eval="True" />
+            <field name="body_html" type="html">
+                <p>Hello,</p>
+
+                <div class="o_editor_banner user-select-none lh-1 d-flex align-items-center alert alert-warning pb-0 pt-3" data-oe-role="status" role="status">
+                    <i class="o_editor_banner_icon mb-3 fst-normal" data-oe-aria-label="Banner Warning" aria-label="Banner Warning">⚠️</i>
+                    <div class="o_editor_banner_content w-100 px-3">
+                        <div class="o-paragraph">The following products are currently low on stock:</div>
+                    </div>
+                </div>
+
+                <table class="table table-bordered o_table">
+                    <thead>
+                        <tr style="background-color:rgb(233,232,233);">
+                            <th style="width: 100%; min-width: 96px; font-size: 13px;">
+                                <strong>Product</strong>
+                            </th>
+                            <th style="width: 100%; min-width: 96px; font-size: 13px;">
+                                <strong>On Hand Quantity</strong>
+                            </th>
+                            <th style="width: 100%; min-width: 96px; font-size: 13px;">
+                                <strong>Forecast Quantity</strong>
+                            </th>
+                            <th style="width: 100%; min-width: 96px; font-size: 13px;">
+                                <strong>Minimum Required</strong>
+                            </th>
+                            <th style="width: 100%; min-width: 96px; font-size: 13px;">
+                                <strong>Required Quantity</strong>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr t-foreach="object.get_low_stock_product()" t-as="product">
+                            <td style="width: 100%; font-size: 13px;" valign="top" t-out="product['name'] or ''">Acoustic Bloc Screens</td>
+                            <td style="width: 100%; font-size: 13px;" valign="top" t-out="product['qty_available']">80</td>
+                            <td style="width: 100%; font-size: 13px;" valign="top" t-out="product['virtual_available']">90</td>
+                            <td style="width: 100%; font-size: 13px;" valign="top" t-out="product['minimum_quantity_compute']">100</td>
+                            <td style="width: 100%; font-size: 13px;" valign="top" t-out="product['required_quantity']">20</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </field>
+        </record>
+    </data>
+</odoo>

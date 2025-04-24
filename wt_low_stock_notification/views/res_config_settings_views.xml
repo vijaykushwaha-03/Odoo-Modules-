@@ -5,42 +5,24 @@
         <field name="inherit_id" ref="stock.res_config_settings_view_form" />
         <field name="arch" type="xml">
             <xpath expr="//block[@name='product_setting_container']" position="inside">
-
-                <setting id="low_stock_notification"
-                    title="Enable Low Stock Notifications"
-                    help="Receive alerts when stock is low. Configure quantity types and checks to manage notifications.">
-
-                    <field name="low_stock_alert" />
-
-                    <div class="row mt-2" invisible="not low_stock_alert">
-                        <div>
-                            <label style="" for="quantity_type">Select Quantity Type</label>
-                            <field style="margin-left: 2%; width: 23%;" name="quantity_type"
-                                widget="selection" />
-                        </div>
+                <setting id="low_stock_notification" title="Enable Low Stock Notifications">
+                    <field name="low_stock_notification_enabled" />
+                    <div class="row mt16" invisible="not low_stock_notification_enabled">
+                        <label for="quantity_type" class="col-lg-4 o_light_label"/>
+                        <field name="quantity_type" class="oe_inline" required="1"/>
                     </div>
-                    <div class="d-flex mt-2" invisible="not low_stock_alert">
-                        <div class="row">
-                            <label for="product_quantity_check">Product Quantity Check</label>
-                            <div class="mt-1">
-                                <field class="oe_inline" style="width: 55%;"
-                                    name="product_quantity_check" widget="selection" />
-                            </div>
-                        </div>
-                        <div invisible="not show_minimum_quantity">
-                            <label for="minimum_quantity">Minimum Quantity</label>
-                            <div>
-                                <field name="minimum_quantity" />
-                            </div>
-                        </div>
+                    <div class="row mt16" invisible="not low_stock_notification_enabled">
+                        <label for="product_quantity_check" class="col-lg-4 o_light_label"/>
+                        <field name="product_quantity_check" class="oe_inline" required="1"/>
                     </div>
-
-
+                    <div class="row mt16" invisible="product_quantity_check != 'global' or not low_stock_notification_enabled">
+                        <label for="minimum_quantity" class="col-lg-4 o_light_label"/>
+                        <field name="minimum_quantity" class="oe_inline" required="1"/>
+                    </div>
+                    <br/>
+                    <button invisible="not low_stock_notification_enabled" name="action_open_email_template" icon="oi-arrow-right" type="object" string="Manage Recipients" class="btn-link"/>
                 </setting>
-
             </xpath>
-
-
         </field>
     </record>
 </odoo>
