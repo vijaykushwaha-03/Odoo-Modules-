@@ -18,8 +18,8 @@ class ResConfigSettings(models.TransientModel):
         ('reorder_rules', 'Reorder Rules (Order Points)')
     ], config_parameter="wt_low_stock_notification.product_quantity_check", default="global")
 
-    minimum_quantity = fields.Integer(
-        string="Minimum Quantity", required=True, config_parameter="wt_low_stock_notification.minimum_quantity")
+    minimum_quantity = fields.Float(
+        string="Minimum Quantity", required=True, config_parameter="wt_low_stock_notification.minimum_quantity", default=0.0)
 
     def set_values(self):
         res = super().set_values()
