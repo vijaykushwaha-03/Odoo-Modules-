@@ -1,33 +1,34 @@
 from odoo import api, fields, models
 
+from odoo import models, api
+
+
 class StockWarehouseOrderpoint(models.Model):
-    _inherit = "stock.warehouse.orderpoint"
+    _inherit = 'stock.warehouse.orderpoint'
 
-    alert_state = fields.Boolean(
-        string='Product Alert State',
-        compute='_compute_alert_state',
-        store=False,
-        help='Indicates if the product is in low stock based on reorder rules.'
-    )
+    @api.model_create_multi
+    def create(self, vals_list):
+        records = super().create(vals_list)
+        records._recompute_product_minimum_qty()
+        return records
 
-    @api.depends('product_id.qty_available', 'product_id.virtual_available', 'product_min_qty')
-    def _compute_alert_state(self):
-        config = self.env['ir.config_parameter'].sudo()
-        stock_alert_enabled = config.get_param('wt_low_stock_notification.low_stock_alert') == 'True'
-        product_quantity_check = config.get_param('wt_low_stock_notification.product_quantity_check')
-        quantity_type = config.get_param('wt_low_stock_notification.quantity_type', 'onhand_qty')
+    def write(self, vals):
+        res = super().write(vals)
+        self._recompute_product_minimum_qty()
+        return res
 
-        for op in self:
-            op.alert_state = False
+    def unlink(self):
+        products = self.mapped('product_id.product_tmpl_id')
+        res = super().unlink()
+        products._compute_minimum_quantity()
+        products._compute_is_low_stock()
+        products._compute_required_quantity()
+        return res
 
-            if not stock_alert_enabled or product_quantity_check != 'reorder_rules':
-                continue
-
-            current_qty = (
-                op.product_id.qty_available
-                if quantity_type == 'onhand_qty'
-                else op.product_id.virtual_available
-            )
-
-            if op.product_min_qty > 0 and current_qty <= op.product_min_qty:
-                op.alert_state = True
+    def _recompute_product_minimum_qty(self):
+        """ Recompute min quantity compute for affected product templates """
+        products = self.mapped('product_id.product_tmpl_id')
+        if products:
+            products._compute_minimum_quantity()
+            products._compute_is_low_stock()
+            products._compute_required_quantity()

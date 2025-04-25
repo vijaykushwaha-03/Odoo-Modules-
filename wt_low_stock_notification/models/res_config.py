@@ -1,5 +1,4 @@
 from odoo import api, models, fields
-from odoo.exceptions import ValidationError
 
 
 class ResConfigSettings(models.TransientModel):
@@ -11,19 +10,27 @@ class ResConfigSettings(models.TransientModel):
     quantity_type = fields.Selection([
         ('onhand_qty', 'On Hand'),
         ('forecast_qty', 'Forecast')
-    ], config_parameter="wt_low_stock_notification.quantity_type")
+    ], config_parameter="wt_low_stock_notification.quantity_type", default="onhand_qty")
 
     product_quantity_check = fields.Selection([
         ('global', 'Global'),
         ('individual', 'Individual'),
         ('reorder_rules', 'Reorder Rules (Order Points)')
-    ], config_parameter="wt_low_stock_notification.product_quantity_check")
+    ], config_parameter="wt_low_stock_notification.product_quantity_check", default="global")
 
     minimum_quantity = fields.Integer(
         string="Minimum Quantity", required=True, config_parameter="wt_low_stock_notification.minimum_quantity")
 
+    def set_values(self):
+        res = super().set_values()
+        # Force recompute of product.template fields
+        self.env['product.template'].search([])._compute_minimum_quantity()
+        self.env['product.template'].search([])._compute_is_low_stock()
+        self.env['product.template'].search([])._compute_required_quantity()
+        return res
+
     @api.onchange('low_stock_notification_enabled')
-    def _onchange_low_stock(self):
+    def _onchange_low_stock_notification_enabled(self):
         """Clear related fields when 'low_stock' is disabled."""
         if not self.low_stock_notification_enabled:
             self.quantity_type = False

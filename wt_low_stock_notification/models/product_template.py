@@ -1,3 +1,4 @@
+import base64
 from odoo import models, fields, api
 
 
@@ -38,8 +39,10 @@ class ProductTemplate(models.Model):
                 elif product_quantity_check == 'individual':
                     rec.minimum_quantity_compute = rec.minimum_quantity
                 else:
-                    # TODO: Check record rule
-                    rec.minimum_quantity_compute = 100.00
+                    orderpoints = self.env['stock.warehouse.orderpoint'].search(
+                        [('product_id.product_tmpl_id', '=', self.id)])
+                    rec.minimum_quantity_compute = min(
+                        op.product_min_qty for op in orderpoints) if orderpoints else 0.0
 
     def _compute_required_quantity(self):
         config = self.env['ir.config_parameter'].sudo()
@@ -86,6 +89,21 @@ class ProductTemplate(models.Model):
             'wt_low_stock_notification.low_stock_notification_enabled')
         low_stock_products = self.get_low_stock_product()
         if mail_template and low_stock_notification_enabled and low_stock_products:
+            ir_actions_report_sudo = self.env['ir.actions.report'].sudo()
+            low_stock_report_action = self.env.ref(
+                'wt_low_stock_notification.action_report_low_stock')
+            low_stock_report = low_stock_report_action.sudo()
+            content, _content_type = ir_actions_report_sudo._render_qweb_pdf(
+                low_stock_report, res_ids=low_stock_products.ids)
+
+            mail_template.attachment_ids = self.env['ir.attachment'].create({
+                'name': 'Low_Stock_Products_Report.pdf',
+                'type': 'binary',
+                'mimetype': 'application/pdf',
+                'raw': content,
+                'res_model': mail_template._name,
+                'res_id': mail_template.id,
+            })
             mail_template.sudo().send_mail(
                 self.id,
                 force_send=True
