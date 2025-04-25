@@ -10,7 +10,7 @@
             </h4>
           </center>
           <hr/>
-          <div class="o_editor_banner user-select-none lh-1 d-flex align-items-center alert alert-warning pb-0 pt-3" data-oe-role="status" role="status">
+          <div class="o_editor_banner user-select-none lh-1 d-flex align-items-center alert alert-warning pb-3 pt-3" data-oe-role="status" role="status">
             <i class="o_editor_banner_icon mb-3 fst-normal" data-oe-aria-label="Banner Warning" aria-label="Banner Warning">⚠️</i>
             <div class="o_editor_banner_content w-100 px-3">
               <div class="o-paragraph">The following products are currently low on stock:</div>

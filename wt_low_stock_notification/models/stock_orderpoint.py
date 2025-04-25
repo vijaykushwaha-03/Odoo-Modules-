@@ -5,6 +5,8 @@ from odoo import models, api
 
 class StockWarehouseOrderpoint(models.Model):
     _inherit = 'stock.warehouse.orderpoint'
+    is_low_stock = fields.Boolean(related="product_tmpl_id.is_low_stock")
+    highlight_color = fields.Integer(related="product_tmpl_id.highlight_color")
 
     @api.model_create_multi
     def create(self, vals_list):

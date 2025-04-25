@@ -40,7 +40,7 @@ class ProductTemplate(models.Model):
                     rec.minimum_quantity_compute = rec.minimum_quantity
                 else:
                     orderpoints = self.env['stock.warehouse.orderpoint'].search(
-                        [('product_id.product_tmpl_id', '=', self.id)])
+                        [('product_id.product_tmpl_id', '=', rec.id)])
                     rec.minimum_quantity_compute = min(
                         op.product_min_qty for op in orderpoints) if orderpoints else 0.0
 
