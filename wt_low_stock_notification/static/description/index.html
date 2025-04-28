@@ -1,230 +1,144 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
-    <link rel="stylesheet" href="../src/css/style.css" />
-    <title>Document</title>
-</head>
-
-<body>
-    <div class="o_field_widget o_readonly_modifier o_field_html oe_styling_v8">
-        <div id="loempia_tabs">
-            <ul role="tablist" class="nav nav-tabs justify-content-center" data-tabs="tabs">
-                <li class="nav-item c1">
-                    <a href="#desc" class="nav-link active" data-bs-toggle="tab">Description</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#license" class="nav-link" data-bs-toggle="tab">License</a>
-                </li>
-            </ul>
-
-            <div id="loempia_tabs_content" class="tab-content">
-                <div class="tab-pane active" id="desc">
-                    <div class="container">
-                        <div class="oe_styling_v8">
-                            <div class="container my-5">
-                                <div class="row pb-0 pe-lg-0 align-items-center border shadow-lg">
-                                    <div class="col-lg-6 p-5">
-                                        <h1 class="fw-bold lh-1 text-body-emphasis">
-                                            inventory Stock
-                                        </h1>
-                                        <p class="lead">
-                                            Stay Ahead with Automated Low Stock Notifications in
-                                            Inventory Management Effortlessly monitor product
-                                            availability with the Low Stock Notification module for
-                                            Odoo Inventory. Integrated directly into your stock
-                                            management workflow, this module enables real-time
-                                            tracking of on-hand and forecasted quantities. Receive
-                                            automated alerts when product quantities drop below
-                                            configured thresholds — whether globally, individually,
-                                            or through reordering rules. Take proactive actions,
-                                            reduce stockouts, and optimize procurement with
-                                            confidence. Designed to support smarter inventory
-                                            decisions, this module ensures you're always informed
-                                            and ready to replenish critical stock — keeping your
-                                            supply chain smooth and efficient.
-                                        </p>
-                                        <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
-                                            <a class="shadow rounded py-3 px-4 d-flex justify-content-center align-items-center mb-2"
-                                                style="
-                                                        text-decoration: none;
-                                                        font-size: 20px;
-                                                        font-weight: bold;
-                                                        width: 100%;
-                                                        background-color: #0cc0df;
-                                                    " href="mailto:info@wisenetic.com" target="_blank"><span
-                                                                                class="fa fa-envelope mr-3 text-black"
-                                                                                style="font-size: 30px"></span><span
-                                                                                class="align-middle mx-3 text-black">Email</span></a>
-                                                                        
-                                         </div>
-                                     </div>
-                                    <div class="col-lg-6 p-0 overflow-hidden shadow-lg">
-                                        <img class="rounded-lg-3 w-100" src="assets/1_low_stock_product.png"
-                                            alt="POS Product Variants Popup Demo Image" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="container px-4 py-5 rounded-3 border shadow-lg my-5">
-                                <h2 class="pb-2 border-bottom">Features</h2>
-                                <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
-                                    <div class="col">
-                                        <div class="d-inline-flex align-items-center justify-content-center fs-4 mb-3">
-                                            <img class="rounded-lg-3"
-                                                src="//apps.odoocdn.com/apps/assets/17.0/wise_pos_stock/icon/time-svgrepo-com.svg?0c99c78"
-                                                width="64">
-                                        </div>
-                                        <h3 class="fs-4 text-body-emphasis">Real-Time Stock Monitoring</h3>
-                                        <p>
-                                            Track product availability in real-time based on on-hand or forecasted quantities directly in the Inventory app. Stay informed with up-to-date stock levels and act proactively.
-                                        </p>
-                                    </div>
-                            
-                                    <div class="col">
-                                        <div class="d-inline-flex align-items-center justify-content-center fs-4 mb-3" style="background-color: #0cc0df; border-radius: 50%; ">
-                                            <img class="rounded-lg-3"
-                                                src="assets/icons/product-svgrepo-com.svg" 
-                                                width="64">
-                                        </div>
-                                        <h3 class="fs-4 text-body-emphasis">Global & Individual Minimum Quantity</h3>
-                                        <p>
-                                            Define a universal minimum quantity for all products using the global setting, or set specific minimum thresholds per product for more granular control.
-                                        </p>
-                                    </div>
-                                    
-                                                        
-                                    <div class="col">
-                                        <div class="d-inline-flex align-items-center justify-content-center fs-4 mb-3">
-                                            <img class="rounded-lg-3"
-                                                src="//apps.odoocdn.com/apps/assets/17.0/wise_pos_stock/icon/down-arrow-svgrepo-com.svg?0c99c78"
-                                                width="64">
-                                        </div>
-                                        <h3 class="fs-4 text-body-emphasis">Low Stock Indicators</h3>
-                                        <p>
-                                            Get notified when stock drops below predefined thresholds. The module supports both individual and global settings, making monitoring more flexible and efficient.
-                                        </p>
-                                    </div>
-                            
-                                    <div class="col">
-                                        <div class="d-inline-flex align-items-center justify-content-center fs-4 mb-3" style="background-color: #0cc0df; border-radius: 50%; ">
-                                            <img class="" 
-                                                src="assets/icons/mail-alt-3-svgrepo-com.svg"
-                                                width="64">
-                                        </div>
-                                        <h3 class="fs-4 text-body-emphasis">Automatic Email Alerts</h3>
-                                        <p>
-                                            Automatically send low stock email notifications to the responsible users when inventory falls below configured limits. Stay alert and never miss a critical stock update.
-                                        </p>
-                                    </div>
-                            
-                                    <div class="col">
-                                        <div class="d-inline-flex align-items-center justify-content-center fs-4 mb-3" style="background-color: #0cc0df; border-radius: 50%; "">
-                                            <img class="rounded-lg-3"
-                                                src="assets/icons/reorder-1-svgrepo-com.svg"
-                                                width="64">
-                                        </div>
-                                        <h3 class="fs-4 text-body-emphasis">Reorder Rule Support</h3>
-                                        <p>
-                                            Automatically detect low stock using On Hand or Forecasted quantities and trigger reordering based on Odoo’s Replenishment rules—supporting both manual and automated workflows.
-                                        </p>                                        
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="container px-4 py-5 rounded-3 border shadow-lg my-5">
-                                <h2 class="pb-2 border-bottom">Inventory Settings</h2>
-                            
-                                <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">                            
-                                    <!-- Card 1 -->
-                                    <div class="col text-center">
-                                        <div class="d-inline-flex align-items-center justify-content-center fs-4 mb-3" 
-                                             >
-                                            <img src="assets/inventory_setting_1.png" alt="Setting Icon 1" class="img-fluid" style="max-width: 70%;">
-                                        </div>
-                                        <p class="mt-2">Here you can select quantity type</p>
-                                    </div>
-                            
-                                    <!-- Card 2 -->
-                                    <div class="col text-center">
-                                        <div class="d-inline-flex align-items-center justify-content-center fs-4 mb-3" 
-                                             >
-                                            <img src="assets/inventory_setting_2.png" alt="Setting Icon 2" class="img-fluid" style="max-width: 70%;">
-                                        </div>
-                                        <p class="mt-2">Here you can select product quantity check </p>
-                                    </div>
-                            
-                                    <!-- Card 3 -->
-                                    <div class="col text-center">
-                                        <div class="d-inline-flex align-items-center justify-content-center fs-4 mb-3" 
-                                             >
-                                            <img src="assets/inventory_setting_3.png" alt="Setting Icon 3" class="img-fluid" style="max-width: 70%;">
-                                        </div>
-                                        <p class="mt-2">in product quantity check when you select global you must have set minimum quantity </p>
-                                    </div>
-                            </div>
-                        </div>
-                        <div class="container px-4 py-5 rounded-3 border shadow-lg my-5">
-                            <h2 class="pb-1 border-bottom">Inventory Set Minimum Quantity for individual Products</h2>
-                            <div class="col">
-                            <p class="mt-2  ">Select the quantity type (Forecasted or On Hand) and choose whether to apply individual product quantity checks.  </p>
-                            <div class="d-inline-flex align-items-center justify-content-center fs-4 mb-3" 
-                                >
-                                    <img src="assets/individual_setting.png" alt="Setting Icon 2" class="img-fluid" style="max-width: 70%;">
-                               </div>
-                            </div>
-                            <div class="col">
-                                <p class="mt-2 ">Then enable option to set minimum quantity for individual products</p>
-                                <div class="d-inline-flex align-items-center justify-content-center fs-4 mb-3" 
-                                    >
-                                        <img src="assets/product_min_qty.png" alt="Setting Icon 2" class="img-fluid" style="max-width: 70%;">
-                                   </div>
-                                </div>
-                        </div>
-                        <div class="container px-4 py-5 rounded-3 border shadow-lg my-5">
-                            <h2 class="pb-1 border-bottom">Replenishment</h2>
-                            <div class="row g-4 py-5 row-cols-1 row-cols-md-2">
-                                <!-- Kanban View -->
-                                <div class="col text-center">
-                                    <p class="mt-2">
-                                        Easily reorder low stock items using the <strong>Replenishment</strong> option under <strong>Operations</strong> in Inventory. View products in <strong>Kanban</strong> view for a visual restocking experience.
-                                    </p>
-                                    <img src="assets/canban_replenishment.png" alt="Kanban Replenishment" class="img-fluid rounded shadow-sm" style="max-height: 250px; object-fit: contain;">
-                                </div>
-                        
-                                <!-- List View -->
-                                <div class="col text-center">
-                                    <p class="mt-2">
-                                        Easily reorder low stock items using the <strong>Replenishment</strong> option under <strong>Operations</strong> in Inventory. View products in <strong>List</strong> view for a quick tabular overview.
-                                    </p>
-                                    <img src="assets/list_replnshment.png" alt="List Replenishment" class="img-fluid rounded shadow-sm" style="max-height: 250px; object-fit: contain;">
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="container px-4 py-5 rounded-3 border shadow-lg my-5">
-                            <h2 class="pb-1 border-bottom">Email Template</h2>
-                            <div class="col">
-                                <!-- <p class="mt-2 h4">Automatically Email Send when Product stock low </p> -->
-                                <p class="mt-2">
-                                    Automatically sends an email notification listing all low stock products when stock levels fall below the configured threshold. Notifications are triggered based on the selected condition — whether using <strong>On Hand</strong>, <strong>Forecasted</strong>, or <strong>Reorder Rule</strong> quantities — ensuring timely alerts and smarter inventory decisions.
-                                </p>                                
-                            <div class="d-inline-flex align-items-center justify-content-center fs-4 mb-3" 
-                                >
-                                    <img src="assets/email_template.png" alt="Setting Icon 2" class="img-fluid" style="max-width: 70%;">
-                               </div>
-                            </div>
-                    </div>
-                    
-                </div>
-            </div>
-        </div>
+<div class="container my-5">
+  <div class="row pb-0 pe-lg-0 align-items-center rounded-3 border shadow-lg">
+    <div class="col-lg-6 p-5">
+      <h1 class="display-4 fw-bold lh-1 text-body-emphasis">
+        Product Low Stock
+      </h1>
+      <p class="lead">
+        Keep complete control of your inventory with the Product Low Stock
+        module for Odoo. Automatically track products nearing depletion based on
+        configurable thresholds at both template and variant levels. Get instant
+        notifications, access a dedicated low stock report, and prevent
+        disruptions in your supply chain — all within your Odoo backend.
+      </p>
+      <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
+        <a
+          class="shadow rounded py-3 px-4 d-flex justify-content-center align-items-center mb-2"
+          style="
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: bold;
+            width: 100%;
+            background-color: #0cc0df;
+          "
+          href="mailto:info@wisenetic.com"
+          target="_blank"
+        >
+          <span
+            class="fa fa-envelope mr-3 text-black"
+            style="font-size: 30px"
+          ></span>
+          <span class="align-middle mx-3 text-black">Email</span>
+        </a>
+      </div>
     </div>
-</body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous"></script>
+    <div class="col-lg-6 p-0 overflow-hidden shadow-lg">
+      <img
+        class="rounded-lg-3 w-100"
+        src="hero_low_stock.webp"
+        alt="Product Low Stock Module Demo"
+      />
+    </div>
+  </div>
+</div>
 
-</html>
+<div class="container px-4 py-5 rounded-3 border shadow-lg my-5">
+  <h2 class="pb-2 border-bottom">Features</h2>
+  <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+    <div class="col">
+      <img src="icon/threshold-svgrepo-com.svg" width="64" />
+      <h3 class="fs-4 text-body-emphasis">Custom Stock Thresholds</h3>
+      <p>
+        Set minimum stock levels globally or individually for product templates
+        and variants to match your inventory strategy.
+      </p>
+    </div>
+    <div class="col">
+      <img src="icon/alert-svgrepo-com.svg" width="64" />
+      <h3 class="fs-4 text-body-emphasis">Automated Low Stock Alerts</h3>
+      <p>
+        Receive automatic notifications when stock drops below defined
+        thresholds, enabling proactive restocking decisions.
+      </p>
+    </div>
+    <div class="col">
+      <img src="icon/report-svgrepo-com.svg" width="64" />
+      <h3 class="fs-4 text-body-emphasis">Dedicated Low Stock Report</h3>
+      <p>
+        Quickly review all products with low inventory via a dedicated backend
+        report for efficient inventory oversight.
+      </p>
+    </div>
+    <div class="col">
+      <img src="icon/toggle-svgrepo-com.svg" width="64" />
+      <h3 class="fs-4 text-body-emphasis">Variant & Template Level Control</h3>
+      <p>
+        Manage stock thresholds independently for each product variant or apply
+        settings globally to entire product templates.
+      </p>
+    </div>
+    <div class="col">
+      <img src="icon/code-svgrepo-com.svg" width="64" />
+      <h3 class="fs-4 text-body-emphasis">Clean & Well-Commented Code</h3>
+      <p>
+        Lightweight, optimized, and clearly documented code structure for easy
+        maintenance and customization.
+      </p>
+    </div>
+    <div class="col">
+      <img src="icon/support-svgrepo-com.svg" width="64" />
+      <h3 class="fs-4 text-body-emphasis">30 Days Free Support</h3>
+      <p>
+        We offer 30 days of free support post-purchase to help you integrate and
+        fine-tune the module as per your workflow.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="container px-4 py-5 rounded-3 border shadow-lg my-5">
+  <h2 class="pb-2 mb-5 border-bottom">Screens</h2>
+  <h4 class="mb-4">1. Product Low Stock Configuration</h4>
+  <ol class="list-group list-group-flush">
+    <li class="list-group-item">
+      <h5 class="text-muted">1.1 Set Global Minimum Quantity</h5>
+      <p class="text-muted">
+        Define a universal stock threshold to monitor across all products in
+        your inventory.
+      </p>
+    </li>
+    <li class="list-group-item">
+      <h5 class="text-muted">1.2 Variant & Template Thresholds</h5>
+      <p class="text-muted">
+        Assign individual stock limits for each product template or variant
+        based on your stock management policy.
+      </p>
+    </li>
+    <li class="list-group-item">
+      <h5 class="text-muted">1.3 Low Stock Reporting Menu</h5>
+      <p class="text-muted">
+        View a dedicated menu displaying all products with stock quantities
+        below their configured minimum levels.
+      </p>
+    </li>
+  </ol>
+  <img src="screen1_low_stock.webp" class="w-100 mb-5" />
+
+  <h4>2. Low Stock Notification Alerts</h4>
+  <p class="text-muted">
+    Receive clear notifications within the Odoo backend when products approach
+    or fall below their minimum stock threshold.
+  </p>
+  <img src="screen2_low_stock.webp" class="w-100 mb-5" />
+</div>
+
+<div class="container px-4 py-5 rounded-3 border shadow-lg my-5">
+  <img
+    class="d-block mx-auto mb-4 w-50"
+    src="./icon/Wisenetic_logo.png"
+    alt="Wisenetic Logo"
+  />
+  <h1 class="display-5 text-center">
+    Harnessing Wise Technology, Attracting Success
+  </h1>
+</div>

@@ -12,5 +12,17 @@
                 </xpath>
             </field>
         </record>
+
+        <record id="product_kanban_view_inherit_wt_low_stock_notification" model="ir.ui.view">
+            <field name="name">product.kanban.view.inherit.wt.low.stocknotification</field>
+            <field name="inherit_id" ref="product.product_kanban_view" />
+            <field name="model">product.product</field>
+            <field name="arch" type="xml">
+                <xpath expr="//kanban" position="attributes">
+                    <attribute name="highlight_color">highlight_color</attribute>
+                </xpath>
+            </field>
+        </record>
+
     </data>
 </odoo>

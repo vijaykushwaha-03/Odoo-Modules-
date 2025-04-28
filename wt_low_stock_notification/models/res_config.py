@@ -1,3 +1,4 @@
+from email.policy import default
 from odoo import api, models, fields
 
 
@@ -5,7 +6,7 @@ class ResConfigSettings(models.TransientModel):
     _inherit = "res.config.settings"
 
     low_stock_notification_enabled = fields.Boolean(
-        string="Low Stock Notification", config_parameter="wt_low_stock_notification.low_stock_notification_enabled")
+        string="Low Stock Notification", config_parameter="wt_low_stock_notification.low_stock_notification_enabled", default=False)
 
     quantity_type = fields.Selection([
         ('onhand_qty', 'On Hand'),
@@ -21,12 +22,19 @@ class ResConfigSettings(models.TransientModel):
     minimum_quantity = fields.Float(
         string="Minimum Quantity", required=True, config_parameter="wt_low_stock_notification.minimum_quantity", default=0.0)
 
+    is_apply_on_variant = fields.Boolean(
+        string="Apply On Product Variant", required=True, config_parameter="wt_low_stock_notification.is_apply_on_variant", default=False)
+
     def set_values(self):
         res = super().set_values()
         # Force recompute of product.template fields
         self.env['product.template'].search([])._compute_minimum_quantity()
         self.env['product.template'].search([])._compute_is_low_stock()
         self.env['product.template'].search([])._compute_required_quantity()
+        self.env['product.product'].search([])._compute_minimum_quantity()
+        self.env['product.product'].search([])._compute_is_low_stock()
+        self.env['product.product'].search([])._compute_required_quantity()
+
         return res
 
     @api.onchange('low_stock_notification_enabled')
@@ -40,7 +48,7 @@ class ResConfigSettings(models.TransientModel):
     def action_open_email_template(self):
         # Find your specific template by XML ID or name
         template = self.env.ref(
-            'wt_low_stock_notification.low_stock_notification_email_template')
+            'wt_low_stock_notification.low_stock_notification_product_product_email_template')
 
         return {
             'type': 'ir.actions.act_window',

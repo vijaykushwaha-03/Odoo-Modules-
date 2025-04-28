@@ -19,6 +19,12 @@
                         <label for="minimum_quantity" class="col-lg-4 o_light_label"/>
                         <field name="minimum_quantity" class="oe_inline" required="low_stock_notification_enabled"/>
                     </div>
+                    <div class="row mt16" invisible="not group_product_variant or not low_stock_notification_enabled">
+                        <field name="is_apply_on_variant" class="oe_inline" />
+                        <div class="col ps-0">
+                            <label for="is_apply_on_variant"/>
+                        </div>
+                    </div>
                     <br/>
                     <button invisible="not low_stock_notification_enabled" name="action_open_email_template" icon="oi-arrow-right" type="object" string="Manage Recipients" class="btn-link"/>
                 </setting>
