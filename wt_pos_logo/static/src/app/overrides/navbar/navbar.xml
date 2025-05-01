@@ -2,13 +2,9 @@
 <templates id="template" xml:space="preserve">
 
     <t t-inherit="point_of_sale.Navbar" t-inherit-mode="extension">
-        <xpath expr="//img[hasclass('pos-logo')]" position="replace">
-            <t t-if="pos.config.enable_pos_logo">
-                <img height="42" class="pos-logo pos-logo mw-100" t-att-src="'/web/binary/pos_logo'" alt="Logo"/>           
-            </t>
-            <t t-else="">
-                <img class="pos-logo pos-logo mw-100" height="42" t-on-click="() => debug.toggleWidget()" src="/web/static/img/logo.png" alt="Logo" />
-            </t>
+        <xpath expr="//img[hasclass('pos-logo')]" position="attributes">
+            <attribute name="t-attf-style">{{ pos.config.enable_pos_logo and pos.config.logo_option == 'none' ? "display:none" : "display:block"}}</attribute>
+            <attribute i-if="pos.config.enable_pos_logo" name="t-attf-src">{{ pos.config.enable_pos_logo ? "/web/binary/pos_logo" : "/web/static/img/logo.png"}}</attribute>
         </xpath>
     </t>
 </templates>
