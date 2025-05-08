@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="res_config_settings_view_form_website_settings" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.website</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="website.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//setting[@id='google_analytics_setting']" position="after">
+                <setting id="facebook_pixel_integration" help="Track Website Activities, Improve Your Return on Advertising, Reach New and Existing Customers on Facebook Ads.">
+                    <field name="facebook_pixel"/>
+                    <div class="facebook-pixel-option" invisible="not facebook_pixel">
+                        <div class="row mt16">
+                            <label class="col-lg-3 o_light_label" string="Tracking Id" for="pixel_tracking_id"/>
+                            <field name="pixel_tracking_id" placeholder="XXXXXXXXXXXXXXXX"
+                                required="facebook_pixel"/>
+                        </div>
+                    </div>
+                </setting>
+            </xpath>
+        </field>
+    </record>
+</odoo>
