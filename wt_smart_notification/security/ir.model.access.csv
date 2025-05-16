@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_smart_notification_rule_all,smart_notification_rule_all,model_smart_notification_rule,base.group_user,1,1,1,1
+access_sale_order_all,sale_order_all,sale.model_sale_order,base.group_user,1,1,1,1
+

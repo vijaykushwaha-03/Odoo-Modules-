@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <menuitem name ="Notification"
+        id="notification_menu_technical"
+        parent="base.menu_custom"
+        sequence="5"/>
+            
+    <menuitem name="Notifications"
+        id="menu_notification"
+        parent="wt_smart_notification.notification_menu_technical"
+        action="wt_smart_notification.action_view_notification_notifications"
+        sequence="1"/>      
+ 
+    <record id="action_view_notification_notifications" model="ir.actions.act_window">
+        <field name="name">Notifications</field>
+        <field name="res_model">smart.notification.rule</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+     <record id="notifications_list" model="ir.ui.view">
+        <field name="name">notifications.list</field>
+        <field name="model">smart.notification.rule</field>        
+        <field name="arch" type="xml">
+            <list string="notifications">
+                <field name="name"/> 
+                <field name="model_id"/>
+                <field name="type"/>
+            </list>
+        </field>
+    </record>  
+
+    <record id="view_notifications_form" model="ir.ui.view">
+        <field name="name">notifications.form</field>
+        <field name="model">smart.notification.rule</field>
+        <field name="arch" type="xml">
+        <form string="notifications Form">
+            <header>
+                    <field name="state" widget="statusbar"
+                           statusbar_visible="draft,done"/>
+                    <button name="action_apply" type="object"
+                            class="btn btn-primary"
+                            string="Apply"
+                            invisible="state !='draft'"
+                            />
+                    <button name="action_cancel" type="object"
+                            class="btn btn-secondary"
+                            string="Cancel"
+                            invisible="state != 'done'"
+                            />
+                    <button name="reset_draft" type="object"
+                            class="btn btn-secondary"
+                            string="Reset to draft"
+                            invisible="state != 'cancelled'"
+                            />
+            </header>
+            <sheet>
+                 <div class="oe_title">
+                        <h1>
+                            <field name="name" required="True"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <field name="message" required="True"/>
+                    </group>
+                    <group>
+                        <group>
+                            <field name="group_id" widget="many2one_tags" />
+                             <field name="user_ids" widget="many2many_tags"/>
+                            <field name="type" required="True"/>
+                            <field name="model_name" invisible="1"/>
+                        </group>
+                        <group>
+                            <field name="model_id" required="True"/>
+                            <field name="active" required="True"/> 
+                            <field name="view_id" required="True"/>
+                            <field name="new_view_id"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Filters">
+                            <field name="domain"
+                                   required="True"
+                                   widget="domain"
+                                   options="{'model': 'model_name'}"/>
+                        </page>
+                    </notebook>
+                
+            </sheet> 
+        </form>
+        </field>
+    </record>    
+</odoo>

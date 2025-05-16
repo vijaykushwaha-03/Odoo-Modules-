@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--        Group Category-->
+    <record model="ir.module.category" id="smart_alert">
+        <field name="name">Smart Alert</field>
+        <field name="description">Helps you to create customized alert
+            messages.
+        </field>
+        <field name="sequence">10</field>
+    </record>
+    <!--        Smart Alert Warning: Admin-->
+    <record id="wt_smart_notification_group_admin" model="res.groups">
+        <field name="name">Smart Alert Warning: Admin</field>
+        <field name="category_id" ref="wt_smart_notification.smart_alert"/>
+    </record>
+    <!--        Smart Alert Warning: User-->
+    <record id="wt_smart_notification_group_user" model="res.groups">
+        <field name="name">Smart Alert Warning: User</field>
+        <field name="category_id" ref="wt_smart_notification.smart_alert"/>
+        <field name="implied_ids" eval="[(4, ref('wt_smart_notification.wt_smart_notification_group_admin'))]"/>
+    </record>
+
+</odoo>
