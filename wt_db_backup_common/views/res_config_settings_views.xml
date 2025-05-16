@@ -7,8 +7,7 @@
         <field name="inherit_id" ref="base.res_config_settings_view_form"/>
         <field name="arch" type="xml">
             <xpath expr="//form" position="inside">
-                <app data-string="Backup" string="Database Backup" name="database_backup" groups="base.group_system">
-
+                <app data-string="Backup" string="Database Backup" name="database_backup" logo="/wt_db_backup_common/static/description/icon.png">
                     <block title="Backup Directory Path" name="db_backup_directory_path">
                         <setting id="wt_db_backup_directory_path">
                             <div class="content-group" id="database_backup_directory_path">
@@ -22,7 +21,6 @@
                             </div>
                         </setting>
                     </block>
-
                     <block title="Local Backup" name="local_backup">
                         <setting id="wt_local_backup_enabled" string="Enable Local Backup">                        
                             <field name="local_backup_enabled"/>
@@ -50,7 +48,6 @@
                             </div>
                         </setting>
                     </block>      
-
                 </app>
             </xpath>
         </field>

@@ -20,12 +20,16 @@ class AutoBackup(models.Model):
     def create_gdrive_backup(self):    
         local_backup_enabled = self._get_config_param('db_backup.local_backup_enabled') == 'True'  
         gdrive_backup_enabled = self._get_config_param('gdrive_db_backup.gdrive_backup_enabled') == 'True'      
-        backup_format = self._get_config_param('gdrive_db_backup.backup_format')
+        backup_format = self._get_config_param('gdrive_db_backup.backup_format')       
 
-        if not (local_backup_enabled and gdrive_backup_enabled):
-            _logger.error("Either local or Google Drive backup must be enabled.")
+        if not local_backup_enabled:
+            _logger.error("Local backup must be enabled.")            
             return False
 
+        if not gdrive_backup_enabled:
+            _logger.error("Google Drive backup must be enabled.")            
+            return False
+    
         backup_model = self.env['db.local.backup']       
         backup_result = backup_model.perform_backup(backup_format, storage_type="gdrive")        
         backup_dir = backup_result.get("backup_dir")     
@@ -63,27 +67,35 @@ class AutoBackup(models.Model):
             _logger.error("Missing OAuth credentials for Google Drive authentication.")
             return None
         
+        base_url = self.env['ir.config_parameter'].sudo().get_param('web.base.url')        
+        redirect_uri = f"{base_url}/google_drive/authentication"
+
         url = "https://oauth2.googleapis.com/token"        
         data = {
             "client_id": client_id,
             "client_secret": client_secret,
             "code": auth_code,
             "grant_type": "authorization_code",
-            "redirect_uri": "http://localhost:8069/google_drive/authentication"
+            "redirect_uri": redirect_uri
         }
         response = requests.post(url, data=data)
         
         if response.status_code == 200:
             token_data = response.json()
-            refresh_token = token_data.get("refresh_token")
-
-            if refresh_token:
-                self.env['ir.config_parameter'].sudo().set_param('gdrive_db_backup.refresh_token', refresh_token)                
-            else:
-                _logger.warning("No refresh token received from Google. It might already be registered.")
+            return token_data
+           
         else:
             _logger.error("Failed to obtain refresh token: %s", response.json())
-        
+    
+    def get_token_data(self):
+        token_data = self.get_refresh_token()
+        refresh_token = token_data.get("refresh_token")        
+
+        if refresh_token:
+            self.env['ir.config_parameter'].sudo().set_param('gdrive_db_backup.refresh_token', refresh_token)                
+        else:
+            _logger.warning("No refresh token received from Google. It might already be registered.")
+    
     def get_access_token(self):
         client_id = self._get_config_param('gdrive_db_backup.client_id')
         client_secret = self._get_config_param('gdrive_db_backup.client_secret')        
@@ -97,7 +109,7 @@ class AutoBackup(models.Model):
         # Generate refresh token if missing
         if not refresh_token:
             _logger.warning("No refresh token found. Attempting to generate one.")
-            self.get_refresh_token()
+            self.get_token_data()
             refresh_token = self._get_config_param('gdrive_db_backup.refresh_token')
 
         if not refresh_token:
@@ -217,8 +229,7 @@ class AutoBackup(models.Model):
     def send_email_notification(self, template_xml_id, file_path=None, file_id=None, error_message=None):
         """Generic method to send success or failure email notifications"""
         template = self.env.ref(f'wt_db_backup_gdrive.{template_xml_id}')
-        recipient_email = self._get_config_param('gdrive_db_backup.email_notification')
-        print(recipient_email)
+        recipient_email = self._get_config_param('gdrive_db_backup.email_notification')    
 
         if not recipient_email:
             _logger.error("Email notification is not configured. Please set an email in the config.")

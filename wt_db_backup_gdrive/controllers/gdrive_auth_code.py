@@ -15,6 +15,7 @@ class GoogleDriveAuth(http.Controller):
             return "No authentication code received."       
 
         # Store the authentication code in Odoo's config parameters
-        request.env['ir.config_parameter'].sudo().set_param('gdrive_db_backup.authentication_code', code)        
+        request.env['ir.config_parameter'].sudo().set_param('gdrive_db_backup.authentication_code', code)  
+        request.env['ir.config_parameter'].sudo().set_param('gdrive_db_backup.refresh_token', "")  
 
         return "Authentication successful. You can close this window."

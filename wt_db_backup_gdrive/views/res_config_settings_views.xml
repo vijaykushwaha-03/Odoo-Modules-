@@ -15,13 +15,13 @@
                             id="gdrive_backup_settings">
                             <div class="row">
                                 <div class="col-4 col-lg-6">
-                                    <label string="Backup Frequency" for="backup_frequency" class="o_form_label col-4 col-lg-9 o_light_label"/>                                        
+                                    <label string="Backup Frequency" for="gdrive_backup_frequency" class="o_form_label col-4 col-lg-9 o_light_label"/>                                        
                                 </div>
                                 <field name="gdrive_backup_frequency" nolabel="1"/>
                             </div>
                             <div class="row">
                                 <div class="col-4 col-lg-6">
-                                    <label string="Backup Time" for="backup_time" class="o_form_label col-4 col-lg-9 o_light_label"/>                                        
+                                    <label string="Backup Time" for="gdrive_backup_time" class="o_form_label col-4 col-lg-9 o_light_label"/>                                        
                                 </div>
                                 <field name="gdrive_backup_time" nolabel="1"/>
                             </div>
@@ -79,10 +79,22 @@
                         <br/>
                         <div class="row">
                             <div class="col-4 col-lg-6">
+                                <label string="Authentication Code" for="gdrive_authentication_code" class="o_form_label col-4 col-lg-9 o_light_label"/>
+                            </div>
+                            <field name="gdrive_authentication_code" placeholder="Auto-filled after authentication"/>
+                        </div>
+                        <div class="row">
+                            <div class="col-4 col-lg-6">
                                 <label string="Google Drive Folder ID" for="gdrive_folder_id" class="o_form_label col-4 col-lg-9 o_light_label"/>
                             </div>
                             <field name="gdrive_folder_id" placeholder="Enter Folder ID" required="gdrive_backup_enabled"/>
-                        </div>                            
+                        </div>                       
+                        <div class="row">
+                            <div class="col-4 col-lg-6">
+                                <label string="Redirect Uri" for="base_url_display" class="o_form_label col-4 col-lg-9 o_light_label"/>
+                            </div>
+                            <field name="base_url_display" placeholder="Copy Redirect Uri Here" widget="CopyClipboardURL"/>
+                        </div>                                                                    
                     </setting>
                 </block>            
             </xpath>

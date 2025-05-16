@@ -66,8 +66,7 @@ class AutoBackup(models.Model):
             return {"success": False, "message": error} 
     
     def create_backup(self):
-        local_backup_enabled, _, backup_format = self._get_config_param()
-        
+        local_backup_enabled, _, backup_format = self._get_config_param()        
         if not local_backup_enabled:
             return        
         self.perform_backup(backup_format, storage_type='local')             

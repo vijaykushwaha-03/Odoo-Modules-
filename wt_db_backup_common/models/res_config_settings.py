@@ -17,22 +17,20 @@ class ResConfigSettings(models.TransientModel):
         help="Specify the directory where local backups will be stored. "
              "For example, '/home/odoo/backups'. "        
     )
-    backup_frequency = fields.Selection([
-        ('minutes', 'Minutes'),
-        ('hours', 'Hours'),
+    backup_frequency = fields.Selection([       
         ('days', 'Days'),
         ('weeks', 'Weeks'),
         ('months', 'Months')
-    ], string="Backup Frequency", config_parameter='db_backup.backup_frequency', default='days')
+    ], string="Local Backup Frequency", config_parameter='db_backup.backup_frequency', default='days')
     backup_time = fields.Datetime(
-        string="Backup Time",
+        string="Local Backup Time",
         config_parameter='db_backup.backup_time',
         help="Set the date and time for the next scheduled backup."
     )
     backup_format = fields.Selection([
         ('dump', 'Dump (.dump)'),
         ('zip', 'Compressed Zip (.zip)')
-    ], string="Backup Format", config_parameter='db_backup.backup_format', default='zip',
+    ], string="Local Backup Format", config_parameter='db_backup.backup_format', default='zip',
     help="Select the format for the database backup file.")
 
     # Method to update configuration values and modify cron job settings

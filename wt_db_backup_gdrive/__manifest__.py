@@ -16,12 +16,11 @@
         'data/gdrive_backup_cron.xml',
         'data/email_template.xml',
         'views/res_config_settings_views.xml',         
-    ],    
+    ],        
     'installable': True,
     'auto_install': False,
     'application': True,
-    'license': 'OPL-1',
-    # 'images': ['static/description/icon.png'],
+    'license': 'OPL-1',   
     # 'price': '7.99',
     # 'currency': 'USD'
 }
