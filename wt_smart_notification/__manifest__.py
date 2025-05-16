@@ -8,7 +8,6 @@
     'data': [        
         'security/ir.model.access.csv',
         'views/notification_menu.xml',
-        # 'security/smart_alert_warning_groups.xml'
         'views/sale_order_views.xml'
         
     ],
