@@ -31,8 +31,9 @@
         <record id="public_category_mobiles_accessories" model="product.public.category">
             <field name="name">Mobile Accessories</field>
             <field name="sequence">2</field>
-            <!-- <field name="image_1920" type="base64" file="wt_demo_data_electronic_store/static/img/category/Samsung_vs_Apple.webp"/> -->
-        </record>
+            <field name="image_1920" type="base64"
+            file="wt_demo_data_electronic_store/static/img/mobile-assesory/15-cover-silicone.jpeg"/>
+     </record>
 
             <!-- subcategories for Mobiles Accesory -->
 
@@ -211,7 +212,7 @@
         <record id="public_category_computer_accessories" model="product.public.category">
             <field name="name">Computer Accessories</field>
             <field name="sequence">12</field>
-            <!-- <field name="image_1920" type="base64" file="wt_demo_data_electronic_store/static/img/category/computer_accessories.webp"/> -->
+            <field name="image_1920" type="base64" file="wt_demo_data_electronic_store/static/img/computer-accessories/apple_magic_mouse.webp"/>
         </record>
 
             <record id="public_category_computer_accessories_external_hard_disks" model="product.public.category">
@@ -361,20 +362,93 @@
         <record id="public_category_kitchen_appliances" model="product.public.category">
             <field name="name">Kitchen Appliances</field>
             <field name="sequence">18</field>
-            <!-- <field name="image_1920" type="base64" file="wt_demo_data_electronic_store/static/img/category/kitchen_appliances.webp"/> -->
+            <field name="image_1920" type="base64" file="wt_demo_data_electronic_store/static/img/kitchen-appliances/philips_overn_toster_grill.webp"/>
         </record>
 
-            <record id="public_category_kitchen_appliances_microwave_ovens" model="product.public.category">
-                <field name="parent_id" eval="ref('public_category_kitchen_appliances')"/>
-                <field name="name">Microwave Ovens</field>
-                <field name="sequence">1</field>
-            </record>
+        <record id="public_category_kitchen_appliances_microwave_ovens" model="product.public.category">
+            <field name="parent_id" eval="ref('public_category_kitchen_appliances')"/>
+            <field name="name">Microwave Ovens</field>
+            <field name="sequence">1</field>
+        </record>
 
-            <record id="public_category_kitchen_appliances_otg" model="product.public.category">
-                <field name="parent_id" eval="ref('public_category_kitchen_appliances')"/>
-                <field name="name">Oven Toaster Grills (OTG)</field>
-                <field name="sequence">2</field>
-            </record>
+        <record id="public_category_kitchen_appliances_otg" model="product.public.category">
+            <field name="parent_id" eval="ref('public_category_kitchen_appliances')"/>
+            <field name="name">Oven Toaster Grills (OTG)</field>
+            <field name="sequence">2</field>
+        </record>
+
+        <record id="public_category_kitchen_appliances_juicer_mixer_grinder" model="product.public.category">
+            <field name="parent_id" eval="ref('public_category_kitchen_appliances')"/>
+            <field name="name">Juicer/Mixer/Grinder</field>
+            <field name="sequence">3</field>
+        </record>
+
+        <record id="public_category_kitchen_appliances_electric_kettle" model="product.public.category">
+            <field name="parent_id" eval="ref('public_category_kitchen_appliances')"/>
+            <field name="name">Electric Kettle</field>
+            <field name="sequence">4</field>
+        </record>
+
+        <record id="public_category_kitchen_appliances_induction_cooktops" model="product.public.category">
+            <field name="parent_id" eval="ref('public_category_kitchen_appliances')"/>
+            <field name="name">Induction Cooktops</field>
+            <field name="sequence">5</field>
+        </record>
+
+        <record id="public_category_kitchen_appliances_chimneys" model="product.public.category">
+            <field name="parent_id" eval="ref('public_category_kitchen_appliances')"/>
+            <field name="name">Chimneys</field>
+            <field name="sequence">6</field>
+        </record>
+
+        <record id="public_category_kitchen_appliances_hand_blenders" model="product.public.category">
+            <field name="parent_id" eval="ref('public_category_kitchen_appliances')"/>
+            <field name="name">Hand Blenders</field>
+            <field name="sequence">7</field>
+        </record>
+
+        <record id="public_category_kitchen_appliances_sandwich_makers" model="product.public.category">
+            <field name="parent_id" eval="ref('public_category_kitchen_appliances')"/>
+            <field name="name">Sandwich Makers</field>
+            <field name="sequence">8</field>
+        </record>
+
+        <record id="public_category_kitchen_appliances_pop_up_toasters" model="product.public.category">
+            <field name="parent_id" eval="ref('public_category_kitchen_appliances')"/>
+            <field name="name">Pop Up Toasters</field>
+            <field name="sequence">9</field>
+        </record>
+
+        <record id="public_category_kitchen_appliances_electric_cookers" model="product.public.category">
+            <field name="parent_id" eval="ref('public_category_kitchen_appliances')"/>
+            <field name="name">Electric Cookers</field>
+            <field name="sequence">10</field>
+        </record>
+
+        <record id="public_category_kitchen_appliances_wet_grinders" model="product.public.category">
+            <field name="parent_id" eval="ref('public_category_kitchen_appliances')"/>
+            <field name="name">Wet Grinders</field>
+            <field name="sequence">11</field>
+        </record>
+
+        <record id="public_category_kitchen_appliances_food_processors" model="product.public.category">
+            <field name="parent_id" eval="ref('public_category_kitchen_appliances')"/>
+            <field name="name">Food Processors</field>
+            <field name="sequence">12</field>
+        </record>
+
+        <record id="public_category_kitchen_appliances_coffee_makers" model="product.public.category">
+            <field name="parent_id" eval="ref('public_category_kitchen_appliances')"/>
+            <field name="name">Coffee Makers</field>
+            <field name="sequence">13</field>
+        </record>
+
+        <record id="public_category_kitchen_appliances_dishwashers" model="product.public.category">
+            <field name="parent_id" eval="ref('public_category_kitchen_appliances')"/>
+            <field name="name">Dishwashers</field>
+            <field name="sequence">14</field>
+        </record>
+
 
         <!-- Small Home Appliances -->
         <record id="public_category_small_home_appliances" model="product.public.category">
@@ -1217,6 +1291,90 @@
         <!-- Bose F1 Model 812 Flexible Array Loudspeaker -->
         <record id="wt_product_loudspeaker_09" model="product.product">
             <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_speakers_home_audio')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+                <!-- Apple Magic Mouse -->
+        <record id="wt_product_computer_accessory_01" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_computer_accessories_mouse')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <!-- Apple USB SuperDrive -->
+        <record id="wt_product_computer_accessory_02" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_computer_accessories')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <!-- Apple 4TB SSD Kit -->
+        <record id="wt_product_computer_accessory_03" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_computer_accessories_external_hard_disks')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <!-- Bluetooth Mouse - Black -->
+        <record id="wt_product_computer_accessory_04" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_computer_accessories_mouse')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <!-- Duo Plus Type-C Flash Drive 128GB -->
+        <record id="wt_product_computer_accessory_05" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_computer_accessories_pendrives')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <!-- Magic Keyboard with Touch ID and Numeric Keypad for Mac -->
+        <record id="wt_product_computer_accessory_06" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_computer_accessories')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+                <!-- Budan M50 Professional Coffee Maker -->
+        <record id="wt_product_kitchen_appliance_01" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_kitchen_appliances_coffee_makers')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <!-- LG TrueSteam Dishwasher -->
+        <record id="wt_product_kitchen_appliance_02" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_kitchen_appliances_dishwashers')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <!-- LG Charcoal Healthy OTG Oven -->
+        <record id="wt_product_kitchen_appliance_03" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_kitchen_appliances_otg')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <!-- LG Scan Cook 32L Microwave Oven -->
+        <record id="wt_product_kitchen_appliance_04" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_kitchen_appliances_microwave_ovens')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <!-- Philips 2200 Fully Automatic Espresso Machine -->
+        <record id="wt_product_kitchen_appliance_05" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_kitchen_appliances_coffee_makers')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <!-- Philips Oven Toaster Grill -->
+        <record id="wt_product_kitchen_appliance_06" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_kitchen_appliances_otg')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <!-- Samsung Masala SunDry 32L Microwave Oven -->
+        <record id="wt_product_kitchen_appliance_07" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_kitchen_appliances_microwave_ovens')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <!-- Samsung MC32B7382QC 32L Microwave Oven -->
+        <record id="wt_product_kitchen_appliance_08" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_kitchen_appliances_microwave_ovens')])]"/>
             <field name="is_published" eval="True"/>
         </record>
 

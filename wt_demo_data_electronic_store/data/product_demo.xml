@@ -191,28 +191,7 @@
         <record id="storage_1tb" model="product.template.attribute.value">
             <field name="price_extra">300.00</field>
         </record>
-
-        <!-- Example variant products -->
-        
-        <!-- <record id="product_variant_black_128" model="product.product">
-            <field name="default_code">IPH16-BLK-128</field>
-            <field name="weight">0.24</field>
-            <field name="image_1920" type="base64" file="wt_demo_data_electronic_store/static/img/iphone/iphone16-pro-max-Black_Titanium_1.webp"/>
-        </record>
-
-        <record id="product_variant_white_128" model="product.product">
-            <field name="default_code">IPH16-WHT-128</field>
-            <field name="weight">0.24</field>
-            <field name="image_1920" type="base64" file="wt_demo_data_electronic_store/static/img/iphone/iphone16-pro-max-White_Titanium_1.webp"/>
-        </record>
-
-        <record id="product_variant_desert_128" model="product.product">
-            <field name="default_code">IPH16-DES-128</field>
-            <field name="weight">0.24</field>
-            <field name="image_1920" type="base64" file="wt_demo_data_electronic_store/static/img/iphone/iphone16-pro-max-Desert_Titanium_1.webp"/>
-        </record> -->
-
-
+ 
                 <!-- Black Titanium variants -->
         <record id="product_variant_black_128" model="product.product">
             <field name="default_code">IPH16-BLK-128</field>
@@ -385,24 +364,6 @@
             <field name="image_1920" type="base64" file="wt_demo_data_electronic_store/static/img/iphone/iphone-16-black-3.webp"/>
             <field name="sequence">20</field>
         </record>
-        
-         
-
-        <!-- <record id="wt_product_product_3" model="product.template">
-            <field name="name">iPhone 15 Plus</field>
-            <field name="categ_id" ref="wt_product_category_1_1"/>
-            <field name="standard_price">899.00</field> 
-            <field name="list_price">999.00</field>      
-            <field name="type">consu</field>
-            <field name="weight">0.23</field>  
-            <field name="uom_id" ref="uom.product_uom_unit"/>
-            <field name="uom_po_id" ref="uom.product_uom_unit"/>
-            <field name="description_sale">
-                iPhone 15 Plus comes with a 6.7" display, A17 chip, and dual-camera system. Color: Black Titanium.
-            </field>
-            <field name="image_1920" type="base64" file="wt_demo_data_electronic_store/static/img/iphone/iphone-15-black-1.webp"/>
-        </record> -->
-
 
         <!-- Product Template -->
         <record id="wt_product_template_iphone_15_plus" model="product.template">
@@ -3144,8 +3105,287 @@
             <field name="description_sale">Flexible array loudspeaker with advanced technology for professional sound quality.</field>
             <field name="image_1920" type="base64" file="wt_demo_data_electronic_store/static/img/speakers/F1-Model-812-Flexible-Array-loudspeaker.webp"/>
         </record>
+
+
+                <!-- Apple Magic Mouse -->
+        <record id="wt_product_computer_accessory_01" model="product.product">
+            <field name="name">Apple Magic Mouse</field>
+            <field name="categ_id" ref="wt_product_category_1_12_5"/> <!-- Mouse -->
+            <field name="standard_price">69.00</field>
+            <field name="list_price">79.00</field>
+            <field name="type">consu</field>
+            <field name="weight">0.099</field>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="uom_po_id" ref="uom.product_uom_unit"/>
+            <field name="description_sale">Wireless and rechargeable, Apple Magic Mouse features a sleek design and Multi-Touch surface.</field>
+            <field name="image_1920" type="base64" file="wt_demo_data_electronic_store/static/img/computer-accessories/apple_magic_mouse.webp"/>
+        </record>
+
+        <!-- Apple USB SuperDrive -->
+        <record id="wt_product_computer_accessory_02" model="product.product">
+            <field name="name">Apple USB SuperDrive</field>
+            <field name="categ_id" ref="wt_product_category_1_12"/> <!-- General Accessories -->
+            <field name="standard_price">69.00</field>
+            <field name="list_price">79.00</field>
+            <field name="type">consu</field>
+            <field name="weight">0.34</field>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="uom_po_id" ref="uom.product_uom_unit"/>
+            <field name="description_sale">Compact and convenient external optical drive that works with MacBook models via USB.</field>
+            <field name="image_1920" type="base64" file="wt_demo_data_electronic_store/static/img/computer-accessories/apple_usb_superDrive.webp"/>
+        </record>
+
+        <!-- Apple 4TB SSD Kit -->
+        <record id="wt_product_computer_accessory_03" model="product.product">
+            <field name="name">Apple 4TB SSD Kit</field>
+            <field name="categ_id" ref="wt_product_category_1_12_1"/> <!-- External Hard Disks -->
+            <field name="standard_price">999.00</field>
+            <field name="list_price">1099.00</field>
+            <field name="type">consu</field>
+            <field name="weight">0.25</field>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="uom_po_id" ref="uom.product_uom_unit"/>
+            <field name="description_sale">High-capacity 4TB SSD storage expansion kit for Mac Pro and professional workstations.</field>
+            <field name="image_1920" type="base64" file="wt_demo_data_electronic_store/static/img/computer-accessories/apple4TBSSD_kit.webp"/>
+        </record>
+
+        <!-- Bluetooth Mouse - Black -->
+        <record id="wt_product_computer_accessory_04" model="product.product">
+            <field name="name">Bluetooth Mouse - Black</field>
+            <field name="categ_id" ref="wt_product_category_1_12_5"/> <!-- Mouse -->
+            <field name="standard_price">19.00</field>
+            <field name="list_price">25.00</field>
+            <field name="type">consu</field>
+            <field name="weight">0.08</field>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="uom_po_id" ref="uom.product_uom_unit"/>
+            <field name="description_sale">Ergonomic Bluetooth mouse with smooth tracking and long battery life. Sleek black design.</field>
+            <field name="image_1920" type="base64" file="wt_demo_data_electronic_store/static/img/computer-accessories/BluetoothMouse-GalleryImage-Black.webp"/>
+        </record>
+
+        <!-- Duo Plus Type-C Flash Drive 128GB -->
+        <record id="wt_product_computer_accessory_05" model="product.product">
+            <field name="name">Duo Plus Type-C Flash Drive 128GB</field>
+            <field name="categ_id" ref="wt_product_category_1_12_2"/> <!-- Pendrives -->
+            <field name="standard_price">15.00</field>
+            <field name="list_price">20.00</field>
+            <field name="type">consu</field>
+            <field name="weight">0.02</field>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="uom_po_id" ref="uom.product_uom_unit"/>
+            <field name="description_sale">128GB dual-interface USB Type-C flash drive for high-speed data transfer and compatibility.</field>
+            <field name="image_1920" type="base64" file="wt_demo_data_electronic_store/static/img/computer-accessories/duo_pluse_type_c_flash_drive128.webp"/>
+        </record>
+
+        <!-- Magic Keyboard with Touch ID and Numeric Keypad for Mac (USB-C, US English, Black Keys) -->
+        <record id="wt_product_computer_accessory_06" model="product.product">
+            <field name="name">Magic Keyboard with Touch ID and Numeric Keypad for Mac (USB-C, US English, Black Keys)</field>
+            <field name="categ_id" ref="wt_product_category_1_12"/> <!-- General Accessories -->
+            <field name="standard_price">179.00</field>
+            <field name="list_price">199.00</field>
+            <field name="type">consu</field>
+            <field name="weight">0.39</field>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="uom_po_id" ref="uom.product_uom_unit"/>
+            <field name="description_sale">Full-size wireless keyboard with Touch ID, numeric keypad, and USB-C compatibility for Apple silicon Macs.</field>
+            <field name="image_1920" type="base64" file="wt_demo_data_electronic_store/static/img/computer-accessories/magic_keyboard_with_touch_id_and_numeric_keypad_for_mac_usb_c_us_english_black_keys.webp"/>
+        </record>
+
+                <!-- Coffee Maker -->
+        <record id="wt_product_kitchen_appliance_01" model="product.product">
+            <field name="name">Budan M50 Professional Coffee Maker</field>
+            <field name="categ_id" ref="wt_product_category_1_18_13"/> <!-- Coffee Makers -->
+            <field name="standard_price">179.00</field>
+            <field name="list_price">199.00</field>
+            <field name="type">consu</field>
+            <field name="weight">3.5</field>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="uom_po_id" ref="uom.product_uom_unit"/>
+            <field name="description_sale">Professional-grade espresso and coffee machine with precise brewing controls.</field>
+            <field name="image_1920" type="base64" file="wt_demo_data_electronic_store/static/img/kitchen-appliances/budan_m50profecinal_coffee.webp"/>
+        </record>
+
+        <!-- Dishwasher -->
+        <record id="wt_product_kitchen_appliance_02" model="product.product">
+            <field name="name">LG TrueSteam Dishwasher</field>
+            <field name="categ_id" ref="wt_product_category_1_18_14"/> <!-- Dishwashers -->
+            <field name="standard_price">649.00</field>
+            <field name="list_price">749.00</field>
+            <field name="type">consu</field>
+            <field name="weight">15.0</field>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="uom_po_id" ref="uom.product_uom_unit"/>
+            <field name="description_sale">Powerful TrueSteam technology for spotless, hygienic dishwashing performance.</field>
+            <field name="image_1920" type="base64" file="wt_demo_data_electronic_store/static/img/kitchen-appliances/LG-true-stream-dishwasher.webp"/>
+        </record>
+
+        <record id="wt_product_kitchen_appliance_02_img_1" model="product.image">
+            <field name="product_variant_id" ref="wt_product_kitchen_appliance_02"/>
+            <field name="name">Side View</field>
+            <field name="image_1920" type="base64" file="wt_demo_data_electronic_store/static/img/kitchen-appliances/LG-true-stream-dishwasher-2.webp"/>
+            <field name="sequence">10</field>
+        </record>
+
+        <record id="wt_product_kitchen_appliance_02_img_2" model="product.image">
+            <field name="product_variant_id" ref="wt_product_kitchen_appliance_02"/>
+            <field name="name">Side View</field>
+            <field name="image_1920" type="base64" file="wt_demo_data_electronic_store/static/img/kitchen-appliances/LG-true-stream-dishwasher-3.webp"/>
+            <field name="sequence">10</field>
+        </record>
+
+        <record id="wt_product_kitchen_appliance_02_img_3" model="product.image">
+            <field name="product_variant_id" ref="wt_product_kitchen_appliance_02"/>
+            <field name="name">Side View</field>
+            <field name="image_1920" type="base64" file="wt_demo_data_electronic_store/static/img/kitchen-appliances/LG-true-stream-dishwasher-4.webp"/>
+            <field name="sequence">10</field>
+        </record>
         
 
+        <!-- OTG Oven -->
+        <record id="wt_product_kitchen_appliance_03" model="product.product">
+            <field name="name">LG Charcoal Healthy OTG Oven</field>
+            <field name="categ_id" ref="wt_product_category_1_18_2"/> <!-- Oven Toaster Grills (OTG) -->
+            <field name="standard_price">189.00</field>
+            <field name="list_price">229.00</field>
+            <field name="type">consu</field>
+            <field name="weight">8.0</field>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="uom_po_id" ref="uom.product_uom_unit"/>
+            <field name="description_sale">Charcoal convection OTG for healthy and delicious grilling and baking.</field>
+            <field name="image_1920" type="base64" file="wt_demo_data_electronic_store/static/img/kitchen-appliances/LGCharcoalHealthyOvens.webp"/>
+        </record>
+
+        <record id="wt_product_kitchen_appliance_03_img_1" model="product.image">
+            <field name="product_variant_id" ref="wt_product_kitchen_appliance_03"/>
+            <field name="name">Side View</field>
+            <field name="image_1920" type="base64" file="wt_demo_data_electronic_store/static/img/kitchen-appliances/LGCharcoalHealthyOvens-2.webp"/>
+            <field name="sequence">10</field>
+        </record>
+
+        <record id="wt_product_kitchen_appliance_03_img_2" model="product.image">
+            <field name="product_variant_id" ref="wt_product_kitchen_appliance_03"/>
+            <field name="name">Side View</field>
+            <field name="image_1920" type="base64" file="wt_demo_data_electronic_store/static/img/kitchen-appliances/LGCharcoalHealthyOvens-3.webp"/>
+            <field name="sequence">10</field>
+        </record>
+
+        <record id="wt_product_kitchen_appliance_03_img_3" model="product.image">
+            <field name="product_variant_id" ref="wt_product_kitchen_appliance_03"/>
+            <field name="name">Side View</field>
+            <field name="image_1920" type="base64" file="wt_demo_data_electronic_store/static/img/kitchen-appliances/LGCharcoalHealthyOvens-4.webp"/>
+            <field name="sequence">10</field>
+        </record>
+        
+        <!-- Microwave Oven -->
+        <record id="wt_product_kitchen_appliance_04" model="product.product">
+            <field name="name">LG Scan Cook 32L Microwave Oven</field>
+            <field name="categ_id" ref="wt_product_category_1_18_1"/> <!-- Microwave Ovens -->
+            <field name="standard_price">229.00</field>
+            <field name="list_price">259.00</field>
+            <field name="type">consu</field>
+            <field name="weight">14.5</field>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="uom_po_id" ref="uom.product_uom_unit"/>
+            <field name="description_sale">32L microwave oven with Scan Cook technology and charcoal lighting heater.</field>
+            <field name="image_1920" type="base64" file="wt_demo_data_electronic_store/static/img/kitchen-appliances/LGScanCook32LCharcoal-Microwave-ovens-Front-view-DZ-01.webp"/>
+        </record>
+
+        <record id="wt_product_kitchen_appliance_04_img_1" model="product.image">
+            <field name="product_variant_id" ref="wt_product_kitchen_appliance_04"/>
+            <field name="name">Side View</field>
+            <field name="image_1920" type="base64" file="wt_demo_data_electronic_store/static/img/kitchen-appliances/LG-oven-2.webp"/>
+            <field name="sequence">10</field>
+        </record>
+
+        <record id="wt_product_kitchen_appliance_04_img_2" model="product.image">
+            <field name="product_variant_id" ref="wt_product_kitchen_appliance_04"/>
+            <field name="name">Side View</field>
+            <field name="image_1920" type="base64" file="wt_demo_data_electronic_store/static/img/kitchen-appliances/LG-oven-3.webp"/>
+            <field name="sequence">10</field>
+        </record>
+
+        <record id="wt_product_kitchen_appliance_04_img_3" model="product.image">
+            <field name="product_variant_id" ref="wt_product_kitchen_appliance_04"/>
+            <field name="name">Side View</field>
+            <field name="image_1920" type="base64" file="wt_demo_data_electronic_store/static/img/kitchen-appliances/LG-oven-4.webp"/>
+            <field name="sequence">10</field>
+        </record>
+        <!-- Coffee Maker -->
+        <record id="wt_product_kitchen_appliance_05" model="product.product">
+            <field name="name">Philips 2200 Fully Automatic Espresso Machine</field>
+            <field name="categ_id" ref="wt_product_category_1_18_13"/> <!-- Coffee Makers -->
+            <field name="standard_price">429.00</field>
+            <field name="list_price">499.00</field>
+            <field name="type">consu</field>
+            <field name="weight">7.0</field>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="uom_po_id" ref="uom.product_uom_unit"/>
+            <field name="description_sale">Fully automatic espresso machine for brewing barista-style coffee at home.</field>
+            <field name="image_1920" type="base64" file="wt_demo_data_electronic_store/static/img/kitchen-appliances/philips_2200_full_auto_expresso_machine_coffer_maker.webp"/>
+        </record>
+
+        <!-- OTG -->
+        <record id="wt_product_kitchen_appliance_06" model="product.product">
+            <field name="name">Philips Oven Toaster Grill</field>
+            <field name="categ_id" ref="wt_product_category_1_18_2"/> <!-- Oven Toaster Grills (OTG) -->
+            <field name="standard_price">159.00</field>
+            <field name="list_price">179.00</field>
+            <field name="type">consu</field>
+            <field name="weight">6.5</field>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="uom_po_id" ref="uom.product_uom_unit"/>
+            <field name="description_sale">Compact and efficient OTG from Philips, perfect for daily baking and grilling.</field>
+            <field name="image_1920" type="base64" file="wt_demo_data_electronic_store/static/img/kitchen-appliances/philips_overn_toster_grill.webp"/>
+        </record>
+
+        <!-- Microwave Oven -->
+        <record id="wt_product_kitchen_appliance_07" model="product.product">
+            <field name="name">Samsung Masala SunDry 32L Microwave Oven</field>
+            <field name="categ_id" ref="wt_product_category_1_18_1"/> <!-- Microwave Ovens -->
+            <field name="standard_price">259.00</field>
+            <field name="list_price">299.00</field>
+            <field name="type">consu</field>
+            <field name="weight">13.0</field>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="uom_po_id" ref="uom.product_uom_unit"/>
+            <field name="description_sale">Feature-rich microwave with Masala SunDry technology and 32L capacity.</field>
+            <field name="image_1920" type="base64" file="wt_demo_data_electronic_store/static/img/kitchen-appliances/samsungMasalaSunDry32LMC32A7056CK.webp"/>
+        </record>
+
+        <!-- Microwave Oven -->
+        <record id="wt_product_kitchen_appliance_08" model="product.product">
+            <field name="name">Samsung MC32B7382QC 32L Microwave Oven</field>
+            <field name="categ_id" ref="wt_product_category_1_18_1"/> <!-- Microwave Ovens -->
+            <field name="standard_price">279.00</field>
+            <field name="list_price">319.00</field>
+            <field name="type">consu</field>
+            <field name="weight">13.2</field>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="uom_po_id" ref="uom.product_uom_unit"/>
+            <field name="description_sale">High-capacity 32L convection microwave oven with smart auto-cook programs.</field>
+            <field name="image_1920" type="base64" file="wt_demo_data_electronic_store/static/img/kitchen-appliances/SamsungMC32B7382QC.webp"/>
+        </record>
+
+        <record id="wt_product_kitchen_appliance_08_img_1" model="product.image">
+            <field name="product_variant_id" ref="wt_product_kitchen_appliance_08"/>
+            <field name="name">Side View</field>
+            <field name="image_1920" type="base64" file="wt_demo_data_electronic_store/static/img/kitchen-appliances/samsung-oven-2.webp"/>
+            <field name="sequence">10</field>
+        </record>
+
+        <record id="wt_product_kitchen_appliance_08_img_2" model="product.image">
+            <field name="product_variant_id" ref="wt_product_kitchen_appliance_08"/>
+            <field name="name">Side View</field>
+            <field name="image_1920" type="base64" file="wt_demo_data_electronic_store/static/img/kitchen-appliances/samsung-oven-3.webp"/>
+            <field name="sequence">10</field>
+        </record>
+
+        <record id="wt_product_kitchen_appliance_08_img_3" model="product.image">
+            <field name="product_variant_id" ref="wt_product_kitchen_appliance_08"/>
+            <field name="name">Side View</field>
+            <field name="image_1920" type="base64" file="wt_demo_data_electronic_store/static/img/kitchen-appliances/samsung-oven-4.webp"/>
+            <field name="sequence">10</field>
+        </record>
 
     </data>
 </odoo>
