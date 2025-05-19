@@ -1,0 +1,172 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data noupdate="0">
+        <!-- Product Attribute: Color -->
+        <record id="product_attribute_ele_1" model="product.attribute">
+            <field name="name">Color</field>
+            <field name="sequence">10</field>
+        </record>
+
+        <!-- Attribute Values: Black Titanium and White Titanium -->
+        <record id="product_attribute_ele_value_1" model="product.attribute.value">
+            <field name="name">Black Titanium</field>
+            <field name="attribute_id" ref="product_attribute_ele_1"/>
+            <field name="sequence">1</field>
+         </record>
+
+        <record id="product_attribute_ele_value_2" model="product.attribute.value">
+            <field name="name">White Titanium</field>
+            <field name="attribute_id" ref="product_attribute_ele_1"/>
+            <field name="sequence">2</field>
+         </record>
+         <record id="product_attribute_ele_value_3" model="product.attribute.value">
+            <field name="name"> Desert Titanium</field>
+            <field name="attribute_id" ref="product_attribute_ele_1"/>
+            <field name="sequence">3</field>
+         </record>
+
+         <record id="product_attribute_ele_2" model="product.attribute">
+            <field name="name">Storage</field>
+            <field name="sequence">20</field>
+         </record>
+         
+         <record id="product_attribute_ele_storage_1" model="product.attribute.value">
+            <field name="name">128 GB</field>
+            <field name="attribute_id" ref="product_attribute_ele_2"/>
+            <field name="sequence">0</field>
+         </record>
+         <record id="product_attribute_ele_storage_2" model="product.attribute.value">
+            <field name="name">256 GB</field>
+            <field name="attribute_id" ref="product_attribute_ele_2"/>
+            <field name="sequence">1</field>
+         </record>
+         <record id="product_attribute_ele_storage_3" model="product.attribute.value">
+            <field name="name">512 GB</field>
+            <field name="attribute_id" ref="product_attribute_ele_2"/>
+            <field name="sequence">2</field>
+         </record>
+         <record id="product_attribute_ele_storage_4" model="product.attribute.value">
+            <field name="name">1 TB</field>
+            <field name="attribute_id" ref="product_attribute_ele_2"/>
+            <field name="sequence">3</field>
+         </record>
+         
+         <!-- Product Attribute: Color -->
+        <record id="product_attribute_ele_3" model="product.attribute">
+            <field name="name">Color  </field>
+            <field name="sequence">30</field>
+         </record>
+
+         <!-- Attribute Values: Black Titanium and White Titanium -->
+         <record id="product_attribute_ele_3_value_1" model="product.attribute.value">
+               <field name="name">Black Titanium</field>
+               <field name="attribute_id" ref="product_attribute_ele_3"/>
+               <field name="sequence">1</field>
+            </record>
+
+         <record id="product_attribute_ele_3_value_2" model="product.attribute.value">
+               <field name="name">Titanium Gray</field>
+               <field name="attribute_id" ref="product_attribute_ele_3"/>
+               <field name="sequence">2</field>
+            </record>
+            <record id="product_attribute_ele_3_value_3" model="product.attribute.value">
+               <field name="name"> Titanium Silverblue</field>
+               <field name="attribute_id" ref="product_attribute_ele_3"/>
+               <field name="sequence">3</field>
+            </record>
+            <record id="product_attribute_ele_3_value_4" model="product.attribute.value">
+               <field name="name"> Titanium whitesilver</field>
+               <field name="attribute_id" ref="product_attribute_ele_3"/>
+               <field name="sequence">4</field>
+            </record>
+
+
+         <!-- Product Attribute: Color MacBook -->
+         <record id="product_attribute_ele_4" model="product.attribute">
+            <field name="name">Color</field>
+            <field name="sequence">40</field>
+      </record>
+
+      <!-- Attribute Values -->
+      <record id="product_attribute_ele_4_value_1" model="product.attribute.value">
+            <field name="name">Black</field>
+            <field name="attribute_id" ref="product_attribute_ele_4"/>
+            <field name="sequence">1</field>
+      </record>
+
+      <record id="product_attribute_ele_4_value_2" model="product.attribute.value">
+            <field name="name">Silver</field>
+            <field name="attribute_id" ref="product_attribute_ele_4"/>
+            <field name="sequence">2</field>
+      </record>
+         
+            <!-- Product Attribute: Color MacBook -->
+      <record id="product_attribute_ele_5" model="product.attribute">
+         <field name="name">Color </field>
+         <field name="sequence">40</field>
+      </record>
+
+      <!-- Attribute Values -->
+      <record id="product_attribute_ele_5_value_black" model="product.attribute.value">
+         <field name="name">Black</field>
+         <field name="attribute_id" ref="product_attribute_ele_5"/>
+         <field name="sequence">1</field>
+      </record>
+
+      <record id="product_attribute_ele_5_value_blue" model="product.attribute.value">
+         <field name="name">Blue</field>
+         <field name="attribute_id" ref="product_attribute_ele_5"/>
+         <field name="sequence">2</field>
+      </record>
+
+      <record id="product_attribute_ele_5_value_pink" model="product.attribute.value">
+         <field name="name">Pink</field>
+         <field name="attribute_id" ref="product_attribute_ele_5"/>
+         <field name="sequence">3</field>
+      </record>
+
+      <record id="product_attribute_ele_5_value_yellow" model="product.attribute.value">
+         <field name="name">Yellow</field>
+         <field name="attribute_id" ref="product_attribute_ele_5"/>
+         <field name="sequence">4</field>
+      </record>
+
+      <record id="product_attribute_ele_5_value_green" model="product.attribute.value">
+         <field name="name">Green</field>
+         <field name="attribute_id" ref="product_attribute_ele_5"/>
+         <field name="sequence">5</field>
+      </record>
+
+            <!-- Product Attribute: Z Fold6 Color -->
+      <record id="product_attribute_ele_6" model="product.attribute">
+         <field name="name"> Color</field>
+         <field name="sequence">50</field>
+      </record>
+
+      <!-- Attribute Values -->
+      <record id="product_attribute_zfold6_color_value_crafted_black" model="product.attribute.value">
+         <field name="name">Crafted Black</field>
+         <field name="attribute_id" ref="product_attribute_ele_6"/>
+         <field name="sequence">1</field>
+      </record>
+
+      <record id="product_attribute_zfold6_color_value_white" model="product.attribute.value">
+         <field name="name">White</field>
+         <field name="attribute_id" ref="product_attribute_ele_6"/>
+         <field name="sequence">2</field>
+      </record>
+
+      <record id="product_attribute_zfold6_color_value_silver" model="product.attribute.value">
+         <field name="name">Silver</field>
+         <field name="attribute_id" ref="product_attribute_ele_6"/>
+         <field name="sequence">3</field>
+      </record>
+
+      <record id="product_attribute_zfold6_color_value_navy_blue" model="product.attribute.value">
+         <field name="name">Navy Blue</field>
+         <field name="attribute_id" ref="product_attribute_ele_6"/>
+         <field name="sequence">4</field>
+      </record>
+
+         </data>
+</odoo>

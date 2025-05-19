@@ -1,0 +1,1226 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data noupdate="0">
+    
+        <record model="website" id="website.website2">
+            <field name="salesteam_id" ref="sales_team.salesteam_website_sales"/>
+        </record>
+
+        <record id="product_attribute_ele_1" model="product.attribute">
+            <field name="visibility">hidden</field>
+        </record>
+        <record id="product_attribute_ele_2" model="product.attribute">
+            <field name="visibility">hidden</field>
+        </record>
+        <record id="product_attribute_ele_3" model="product.attribute">
+            <field name="visibility">hidden</field>
+        </record>
+        <record id="product_attribute_ele_4" model="product.attribute">
+            <field name="visibility">hidden</field>
+        </record>
+
+
+        <!-- product.public.category -->
+
+        <record id="public_category_mobiles" model="product.public.category">
+            <field name="name">Mobile</field>
+            <field name="sequence">1</field>
+            <field name="image_1920" type="base64" file="wt_demo_data_electronic_store/static/img/category/Samsung_vs_Apple.webp"/>
+        </record>
+
+        <record id="public_category_mobiles_accessories" model="product.public.category">
+            <field name="name">Mobile Accessories</field>
+            <field name="sequence">2</field>
+            <!-- <field name="image_1920" type="base64" file="wt_demo_data_electronic_store/static/img/category/Samsung_vs_Apple.webp"/> -->
+        </record>
+
+            <!-- subcategories for Mobiles Accesory -->
+
+            <record id="public_category_mobiles_accessories_cover" model="product.public.category">
+                <field name="parent_id" eval="ref('public_category_mobiles_accessories')"/>
+                <field name="name">Mobile Cases</field>
+                <field name="sequence">1</field>
+                <!-- <field name="image_1920" type="base64" file="wt_demo_data_electronic_store/static/img/mobile-assesory/15-cover-silicone.jpeg"/>    -->
+            </record>
+
+            <record id="public_category_mobiles_accessories_power_banks" model="product.public.category">
+                <field name="parent_id" eval="ref('public_category_mobiles_accessories')"/>
+                <field name="name">Power Banks</field>
+                <field name="sequence">2</field>
+            </record>
+
+            <record id="public_category_mobiles_accessories_power_cables" model="product.public.category">
+                <field name="parent_id" eval="ref('public_category_mobiles_accessories')"/>
+                <field name="name">Mobile Cables</field>
+                <field name="sequence">3</field>
+            </record>
+
+            <record id="public_category_mobiles_accessories_Charger" model="product.public.category">
+                <field name="parent_id" eval="ref('public_category_mobiles_accessories')"/>
+                <field name="name">Mobile Chargers</field>
+                <field name="sequence">4</field>
+            </record>
+
+        <record id="public_category_smart_wearable_tech" model="product.public.category">
+            <field name="name">Smart Wearable Tech</field>
+            <field name="sequence">3</field>
+            <field name="image_1920" type="base64"
+            file="wt_demo_data_electronic_store/static/img/smart-wearable-tech/MC7J4ref_FV99_VW_34FR+watch-case-46-titanium-natural-cell-s10_VW_34FR+watch-face-46-titanium-natural-s10_VW_34FR.webp"/>
+       </record>
+                <!-- Smart Wearable Tech SUB CATEGORY -->
+
+            <record id="public_category_smart_watches" model="product.public.category">
+                <field name="parent_id" eval="ref('public_category_smart_wearable_tech')"/>
+                <field name="name">Smart Watches</field>
+                <field name="sequence">1</field>
+                <field name="image_1920" type="base64"
+                file="wt_demo_data_electronic_store/static/img/smart-wearable-tech/samsung-galxy-7-pro.png"/>
+               </record>
+            
+            <record id="public_category_smart_glasses" model="product.public.category">
+                <field name="parent_id" eval="ref('public_category_smart_wearable_tech')"/>
+                <field name="name">Smart Glasses (VR)</field>
+                <field name="sequence">2</field>
+                <!-- <field name="image_1920" type="base64" file="wt_demo_data_electronic_store/static/img/category/smart_glasses.webp"/> -->
+            </record>
+            
+            <record id="public_category_smart_bands" model="product.public.category">
+                <field name="parent_id" eval="ref('public_category_smart_wearable_tech')"/>
+                <field name="name">Smart Bands</field>
+                <field name="sequence">3</field>
+                <field name="image_1920" type="base64"
+                  file="wt_demo_data_electronic_store/static/img/smart-wearable-tech/samsung-smart-bend.png"/>
+               </record>
+
+        <record id="public_category_tablets" model="product.public.category">
+            <field name="name">Tablet</field>
+            <field name="sequence">4</field>
+            <field name="image_1920" type="base64"
+            file="wt_demo_data_electronic_store/static/img/tablets/in-galaxy-tab-s8-ultra-5g.webp"/>
+        </record>
+
+        <record id="public_category_cameras" model="product.public.category">
+            <field name="name">Camera</field>
+            <field name="sequence">5</field>
+            <field name="image_1920" type="base64" file="wt_demo_data_electronic_store/static/img/cameras/canon_EOS+R6+Mark+II+RF24-105mm+f4L+IS+USM++front+slant.webp"/>
+        </record>
+
+            <!-- subcategories for Cameras -->          
+            <record id="public_category_dslr_mirrorless" model="product.public.category">
+                <field name="parent_id" eval="ref('public_category_cameras')"/>
+                <field name="name">DSLR And Mirrorless</field>
+                <field name="sequence">1</field>
+                <!-- Optional image field -->
+                <field name="image_1920" type="base64" file="wt_demo_data_electronic_store/static/img/cameras/canon_EOS+R8+RF24-50mm+f4.5-6.3+IS+STM+Front+Slant.webp"/>
+            </record>
+
+            <record id="public_category_compact_bridge" model="product.public.category">
+                <field name="parent_id" eval="ref('public_category_cameras')"/>
+                <field name="name">Compact And Bridge Cameras</field>
+                <field name="sequence">2</field>
+                <field name="image_1920" type="base64" file="wt_demo_data_electronic_store/static/img/cameras/Leica_Q2_Disney_front_Square.webp"/>
+            </record>
+
+            <record id="public_category_sports_action" model="product.public.category">
+                <field name="parent_id" eval="ref('public_category_cameras')"/>
+                <field name="name">Sports And Action</field>
+                <field name="sequence">3</field>
+                <field name="image_1920" type="base64" file="wt_demo_data_electronic_store/static/img/cameras/nikon-z-9-product-image-front-grey-2.webp"/>
+            </record>
+
+        <record id="public_category_camera_accessories" model="product.public.category">
+            <field name="name">Camera Accessories</field>
+            <field name="sequence">6</field>
+            <field name="image_1920" type="base64"
+            file="wt_demo_data_electronic_store/static/img/camera-Accessories/canon_RF400mm+f2.8L+IS+USM+Front+Slant+w+tripod+ring.webp"/>
+            </record>
+
+            <!-- subcategories for Camera Accessories -->
+            <record id="public_category_lens" model="product.public.category">
+                <field name="parent_id" eval="ref('public_category_camera_accessories')"/>
+                <field name="name">Lens</field>
+                <field name="sequence">1</field>
+                <field name="image_1920" type="base64"
+                file="wt_demo_data_electronic_store/static/img/camera-Accessories/afs-nikkor-400mm-f28e-fl-ed-vr_storeimage.webp"/>
+             </record>
+            
+            <record id="public_category_tripods" model="product.public.category">
+                <field name="parent_id" eval="ref('public_category_camera_accessories')"/>
+                <field name="name">Tripods</field>
+                <field name="sequence">2</field>
+                <!-- Optional image field -->
+                <!-- <field name="image_1920" type="base64" file="wt_demo_data_electronic_store/static/img/category/tripods-category.webp"/> -->
+            </record>
+
+        <record id="public_category_headphones_airpods" model="product.public.category">
+            <field name="name">Headphones</field>
+            <field name="sequence">7</field>
+            <field name="image_1920" type="base64" file="wt_demo_data_electronic_store/static/img/Headphones/airpods-max-select.webp"/>
+        </record>
+
+            <!-- Headphones and Airpods -->
+
+            <record id="public_category_headphones" model="product.public.category">
+                <field name="parent_id" eval="ref('public_category_headphones_airpods')"/>
+                <field name="name">Headphones</field>
+                <field name="sequence">1</field>
+                <field name="image_1920" type="base64" file="wt_demo_data_electronic_store/static/img/Headphones/BangOlufsenBeoSoundH100-1.webp"/>
+
+            </record>
+    
+            <record id="public_category_airpods" model="product.public.category">
+                <field name="parent_id" eval="ref('public_category_headphones_airpods')"/>
+                <field name="name">Air-Pods</field>
+                <field name="sequence">2</field>
+                <field name="image_1920" type="base64" file="wt_demo_data_electronic_store/static/img/Headphones/airpods-4-hero-.webp"/>
+            </record>
+            
+            <record id="public_category_buds" model="product.public.category">
+                <field name="parent_id" eval="ref('public_category_headphones_airpods')"/>
+                <field name="name">Ear-Buds</field>
+                <field name="sequence">3</field>
+                <field name="image_1920" type="base64" file="wt_demo_data_electronic_store/static/img/Headphones/in-galaxy-buds-live-r180-sm-r180nzkainu-casetopcombinationmysticblack.webp"/>
+            </record>
+
+        <record id="public_category_leptops" model="product.public.category">
+            <field name="name">Laptops</field>
+            <field name="sequence">8</field>
+            <field name="image_1920" type="base64" file="wt_demo_data_electronic_store/static/img/leptop/apple_mba13-m4-skyblue-gallery1-202503.webp"/>
+        </record>
+
+        <record id="public_category_desktop" model="product.public.category">
+            <field name="name">Desktop PCs</field>
+            <field name="sequence">9</field>
+            <field name="image_1920" type="base64" file="wt_demo_data_electronic_store/static/img/desktop_pc/imac-blue-cto-hero-202410.webp"/>
+        </record>
+
+        <record id="wt_product_healthcare" model="product.public.category">
+            <field name="name">Health Care Appliances</field>
+            <field name="sequence">10</field>
+            <!-- <field name="image_1920" type="base64" file="wt_demo_data_electronic_store/static/img/category/Samsung_vs_Apple.webp"/> -->
+        </record> 
+
+        <record id="wt_product_game_accessories" model="product.public.category">
+            <field name="name">Gaming And Accessories</field>
+            <field name="sequence">11</field>
+            <field name="image_1920" type="base64" file="wt_demo_data_electronic_store/static/img/gaming/ps5-slim-digital-edition-right.webp"/>
+        </record> 
+
+
+            <!-- Computer Accessories -->
+        <record id="public_category_computer_accessories" model="product.public.category">
+            <field name="name">Computer Accessories</field>
+            <field name="sequence">12</field>
+            <!-- <field name="image_1920" type="base64" file="wt_demo_data_electronic_store/static/img/category/computer_accessories.webp"/> -->
+        </record>
+
+            <record id="public_category_computer_accessories_external_hard_disks" model="product.public.category">
+                <field name="parent_id" eval="ref('public_category_computer_accessories')"/>
+                <field name="name">External Hard Disks</field>
+                <field name="sequence">1</field>
+            </record>
+
+            <record id="public_category_computer_accessories_pendrives" model="product.public.category">
+                <field name="parent_id" eval="ref('public_category_computer_accessories')"/>
+                <field name="name">Pendrives</field>
+                <field name="sequence">2</field>
+            </record>
+
+            <record id="public_category_computer_accessories_laptop_skins_decals" model="product.public.category">
+                <field name="parent_id" eval="ref('public_category_computer_accessories')"/>
+                <field name="name">Laptop Skins And Decals</field>
+                <field name="sequence">3</field>
+            </record>
+
+            <record id="public_category_computer_accessories_laptop_bags" model="product.public.category">
+                <field name="parent_id" eval="ref('public_category_computer_accessories')"/>
+                <field name="name">Laptop Bags</field>
+                <field name="sequence">4</field>
+            </record>
+
+            <record id="public_category_computer_accessories_mouse" model="product.public.category">
+                <field name="parent_id" eval="ref('public_category_computer_accessories')"/>
+                <field name="name">Mouse</field>
+                <field name="sequence">5</field>
+            </record>
+
+        <!-- Computer Peripherals -->
+        <record id="public_category_computer_peripherals" model="product.public.category">
+            <field name="name">Computer Peripherals</field>
+            <field name="sequence">13</field>
+            <!-- <field name="image_1920" type="base64" file="wt_demo_data_electronic_store/static/img/category/computer_peripherals.webp"/> -->
+        </record>
+
+            <record id="public_category_computer_peripherals_printers_ink_cartridges" model="product.public.category">
+                <field name="parent_id" eval="ref('public_category_computer_peripherals')"/>
+                <field name="name">Printers And Ink Cartridges</field>
+                <field name="sequence">1</field>
+            </record>
+
+            <record id="public_category_computer_peripherals_monitors" model="product.public.category">
+                <field name="parent_id" eval="ref('public_category_computer_peripherals')"/>
+                <field name="name">Monitors</field>
+                <field name="sequence">2</field>
+            </record>
+
+        <!-- Smart TVs -->
+        <record id="public_category_smart_tvs" model="product.public.category">
+            <field name="name">Smart TVs</field>
+            <field name="sequence">14</field>
+            <field name="image_1920" type="base64" file="wt_demo_data_electronic_store/static/img/smart_tv/samsung-in-oled-s90f-qa83s90faexxl.webp"/>
+        </record>
+
+        <!-- Washing Machine -->
+        <record id="public_category_washing_machine" model="product.public.category">
+            <field name="name">Washing Machine</field>
+            <field name="sequence">15</field>
+            <field name="image_1920" type="base64" file="wt_demo_data_electronic_store/static/img/washing_machine/smasung-in-ww7000d-ww12db.webp"/>
+        </record>
+
+            <record id="public_category_washing_machine_front_load" model="product.public.category">
+                <field name="parent_id" eval="ref('public_category_washing_machine')"/>
+                <field name="name">Fully Automatic Front Load</field>
+                <field name="sequence">1</field>
+            </record>
+
+            <record id="public_category_washing_machine_semi_automatic" model="product.public.category">
+                <field name="parent_id" eval="ref('public_category_washing_machine')"/>
+                <field name="name">Semi Automatic Top Load</field>
+                <field name="sequence">2</field>
+            </record>
+
+            <record id="public_category_washing_machine_top_load" model="product.public.category">
+                <field name="parent_id" eval="ref('public_category_washing_machine')"/>
+                <field name="name">Fully Automatic Top Load</field>
+                <field name="sequence">3</field>
+            </record>
+
+        <!-- Air Conditioners -->
+        <record id="public_category_air_conditioners" model="product.public.category">
+            <field name="name">Air Conditioners</field>
+            <field name="sequence">16</field>
+            <field name="image_1920" type="base64" file="wt_demo_data_electronic_store/static/img/ac/ac-in-ar9500tar70f12caawneu-536156-ar60f24d13wnna-thumb-544879453.webp"/>
+        </record>
+
+            <record id="public_category_air_conditioners_inverter_ac" model="product.public.category">
+                <field name="parent_id" eval="ref('public_category_air_conditioners')"/>
+                <field name="name">Inverter AC</field>
+                <field name="sequence">1</field>
+            </record>
+
+            <record id="public_category_air_conditioners_split_ac" model="product.public.category">
+                <field name="parent_id" eval="ref('public_category_air_conditioners')"/>
+                <field name="name">Split ACs</field>
+                <field name="sequence">2</field>
+            </record>
+
+            <record id="public_category_air_conditioners_window_ac" model="product.public.category">
+                <field name="parent_id" eval="ref('public_category_air_conditioners')"/>
+                <field name="name">Window ACs</field>
+                <field name="sequence">3</field>
+            </record>
+
+        <!-- Refrigerators -->
+        <record id="public_category_refrigerators" model="product.public.category">
+            <field name="name">Refrigerators</field>
+            <field name="sequence">17</field>
+            <field name="image_1920" type="base64" file="wt_demo_data_electronic_store/static/img/refrigerator/samsung-in-ref-convertible-freezer-.webp"/>
+        </record>
+
+            <record id="public_category_refrigerators_single_door" model="product.public.category">
+                <field name="parent_id" eval="ref('public_category_refrigerators')"/>
+                <field name="name">Single Door</field>
+                <field name="sequence">1</field>
+            </record>
+
+            <record id="public_category_refrigerators_double_door" model="product.public.category">
+                <field name="parent_id" eval="ref('public_category_refrigerators')"/>
+                <field name="name">Double Door</field>
+                <field name="sequence">2</field>
+            </record>
+
+            <record id="public_category_refrigerators_triple_door" model="product.public.category">
+                <field name="parent_id" eval="ref('public_category_refrigerators')"/>
+                <field name="name">Four Door</field>
+                <field name="sequence">3</field>
+            </record>
+
+            <record id="public_category_refrigerators_side_by_side" model="product.public.category">
+                <field name="parent_id" eval="ref('public_category_refrigerators')"/>
+                <field name="name">Side by Side</field>
+                <field name="sequence">4</field>
+            </record>
+
+            <record id="public_category_refrigerators_convertible" model="product.public.category">
+                <field name="parent_id" eval="ref('public_category_refrigerators')"/>
+                <field name="name">Convertible</field>
+                <field name="sequence">5</field>
+            </record>
+
+        <!-- Kitchen Appliances -->
+        <record id="public_category_kitchen_appliances" model="product.public.category">
+            <field name="name">Kitchen Appliances</field>
+            <field name="sequence">18</field>
+            <!-- <field name="image_1920" type="base64" file="wt_demo_data_electronic_store/static/img/category/kitchen_appliances.webp"/> -->
+        </record>
+
+            <record id="public_category_kitchen_appliances_microwave_ovens" model="product.public.category">
+                <field name="parent_id" eval="ref('public_category_kitchen_appliances')"/>
+                <field name="name">Microwave Ovens</field>
+                <field name="sequence">1</field>
+            </record>
+
+            <record id="public_category_kitchen_appliances_otg" model="product.public.category">
+                <field name="parent_id" eval="ref('public_category_kitchen_appliances')"/>
+                <field name="name">Oven Toaster Grills (OTG)</field>
+                <field name="sequence">2</field>
+            </record>
+
+        <!-- Small Home Appliances -->
+        <record id="public_category_small_home_appliances" model="product.public.category">
+            <field name="name">Small Home Appliances</field>
+            <field name="sequence">19</field>
+            <!-- <field name="image_1920" type="base64" file="wt_demo_data_electronic_store/static/img/category/small_home_appliances.webp"/> -->
+        </record>
+
+            <record id="public_category_small_home_appliances_irons" model="product.public.category">
+                <field name="parent_id" eval="ref('public_category_small_home_appliances')"/>
+                <field name="name">Irons</field>
+                <field name="sequence">1</field>
+            </record>
+
+            <record id="public_category_small_home_appliances_water_purifiers" model="product.public.category">
+                <field name="parent_id" eval="ref('public_category_small_home_appliances')"/>
+                <field name="name">Water Purifiers</field>
+                <field name="sequence">2</field>
+            </record>
+
+        <!-- Speakers -->
+        <record id="public_category_speakers" model="product.public.category">
+            <field name="name">Speakers</field>
+            <field name="sequence">20</field>
+            <field name="image_1920" type="base64" file="wt_demo_data_electronic_store/static/img/speakers/Bose-Smart-Soundbar-700.webp"/>
+        </record>
+
+            <record id="public_category_speakers_home_audio" model="product.public.category">
+                <field name="parent_id" eval="ref('public_category_speakers')"/>
+                <field name="name">Home Audio Speakers</field>
+                <field name="sequence">1</field>
+            </record>
+
+            <record id="public_category_speakers_home_theatres" model="product.public.category">
+                <field name="parent_id" eval="ref('public_category_speakers')"/>
+                <field name="name">Home Theatres</field>
+                <field name="sequence">2</field>
+            </record>
+
+            <record id="public_category_speakers_soundbars" model="product.public.category">
+                <field name="parent_id" eval="ref('public_category_speakers')"/>
+                <field name="name">Soundbars</field>
+                <field name="sequence">3</field>
+            </record>
+
+            <record id="public_category_speakers_bluetooth" model="product.public.category">
+                <field name="parent_id" eval="ref('public_category_speakers')"/>
+                <field name="name">Bluetooth Speakers</field>
+                <field name="sequence">4</field>
+            </record>
+
+        
+
+          <!-- Product Category: Add Products -->
+
+        <!-- Mobiles -->
+
+        <record id="wt_product_template_iphone_16" model="product.template">
+            <field name="public_categ_ids" eval="[(6,0,[ref('public_category_mobiles')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <record id="wt_product_product_2" model="product.product">
+            <field name="public_categ_ids" eval="[(6,0,[ref('public_category_mobiles')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <record id="wt_product_template_iphone_15_plus" model="product.template">
+            <field name="public_categ_ids" eval="[(6,0,[ref('public_category_mobiles')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <record id="wt_product_product_4" model="product.product">
+            <field name="public_categ_ids" eval="[(6,0,[ref('public_category_mobiles')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <record id="wt_product_template_samsung_s25" model="product.template">
+            <field name="public_categ_ids" eval="[(6,0,[ref('public_category_mobiles')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <record id="wt_product_template_zfold6" model="product.template">
+            <field name="public_categ_ids" eval="[(6,0,[ref('public_category_mobiles')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <record id="wt_product_product_7" model="product.product">
+            <field name="public_categ_ids" eval="[(6,0,[ref('public_category_mobiles')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <record id="wt_product_product_8" model="product.product">
+            <field name="public_categ_ids" eval="[(6,0,[ref('public_category_mobiles')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <record id="wt_product_product_9" model="product.product">
+            <field name="public_categ_ids" eval="[(6,0,[ref('public_category_mobiles')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <record id="wt_product_product_10" model="product.product">
+            <field name="public_categ_ids" eval="[(6,0,[ref('public_category_mobiles')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <record id="wt_product_product_11" model="product.product">
+            <field name="public_categ_ids" eval="[(6,0,[ref('public_category_mobiles')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <!-- Mobiles Accessory - Mobile Cases -->
+        <record id="wt_product_product_mobile_case_1" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_mobiles_accessories_cover')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+        <record id="wt_product_product_mobile_case_2" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_mobiles_accessories_cover')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+        <record id="wt_product_product_mobile_case_3" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_mobiles_accessories_cover')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+        <record id="wt_product_product_mobile_case_4" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_mobiles_accessories_cover')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+        <record id="wt_product_product_mobile_case_5" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_mobiles_accessories_cover')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+        <record id="wt_product_product_mobile_case_6" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_mobiles_accessories_cover')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <!-- Mobile Cables -->
+        <record id="wt_product_product_mobile_cabel_1" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_mobiles_accessories_power_cables')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+        <record id="wt_product_product_mobile_cabel_2" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_mobiles_accessories_power_cables')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <!-- Mobile Charger -->
+        <record id="wt_product_product_mobile_charger_1" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_mobiles_accessories_Charger')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <!-- Smart Watches -->
+        <record id="wt_product_product_smart_watch_1" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_smart_watches')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+        <record id="wt_product_product_smart_watch_2" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_smart_watches')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+        <record id="wt_product_product_smart_watch_3" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_smart_watches')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+        <record id="wt_product_product_smart_watch_4" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_smart_watches')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+        <record id="wt_product_product_smart_watch_5" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_smart_watches')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <!-- Smart Band -->
+        <record id="wt_product_product_smart_bend_1" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_smart_bands')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <!-- Tablet -->
+
+ 
+        <record id="wt_product_product_tablets_1" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_tablets')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <record id="wt_product_product_tablets_2" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_tablets')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <record id="wt_product_product_tablets_3" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_tablets')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <record id="wt_product_product_tablets_4" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_tablets')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <record id="wt_product_product_tablets_5" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_tablets')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <record id="wt_product_product_tablets_6" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_tablets')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <record id="wt_product_product_tablets_7" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_tablets')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <record id="wt_product_product_tablets_8" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_tablets')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <record id="wt_product_product_tablets_9" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_tablets')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <record id="wt_product_product_tablets_10" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_tablets')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <!-- Camera -->
+        
+        <!-- DSLR And Mirrorless -->
+        <record id="wt_product_camera_1" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_dslr_mirrorless')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <record id="wt_product_camera_2" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_dslr_mirrorless')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <record id="wt_product_camera_3" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_dslr_mirrorless')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <record id="wt_product_camera_4" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_dslr_mirrorless')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <!-- Compact And Bridge Cameras -->
+        <record id="wt_product_camera_5" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_compact_bridge')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <record id="wt_product_camera_6" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_compact_bridge')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <record id="wt_product_camera_7" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_compact_bridge')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <!-- Sports And Action -->
+        <record id="wt_product_camera_8" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_sports_action')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <record id="wt_product_camera_9" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_sports_action')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <record id="wt_product_camera_10" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_sports_action')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <!-- Lences -->
+            
+        <record id="wt_product_camera_lens_1" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_lens')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+        
+        <record id="wt_product_camera_lens_2" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_lens')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+        
+        <record id="wt_product_camera_lens_3" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_lens')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+        
+        
+        <record id="wt_product_camera_lens_4" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_lens')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+        
+        <record id="wt_product_camera_lens_5" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_lens')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+        
+        <record id="wt_product_camera_lens_6" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_lens')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+        
+        <record id="wt_product_camera_lens_7" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_lens')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+        
+        <record id="wt_product_camera_lens_8" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_lens')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+        
+        <record id="wt_product_camera_lens_9" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_lens')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+        
+        <record id="wt_product_camera_lens_10" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_lens')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+        
+        <record id="wt_product_camera_lens_11" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_lens')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+        
+        <record id="wt_product_camera_lens_12" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_lens')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+        
+        <record id="wt_product_camera_lens_13" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_lens')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+        
+        <record id="wt_product_camera_lens_14" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_lens')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+        
+        <record id="wt_product_camera_lens_15" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_lens')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+        
+        <record id="wt_product_camera_lens_16" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_lens')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+        
+        <record id="wt_product_camera_lens_17" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_lens')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+        
+        <record id="wt_product_camera_lens_18" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_lens')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+        
+        <!-- Headphones and Airpods -->
+
+        <record id="wt_product_product_headphones_1" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_headphones')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+        
+        <record id="wt_product_product_headphones_2" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_headphones')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+        
+        <record id="wt_product_product_headphones_3" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_headphones')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+        
+        <record id="wt_product_product_headphones_4" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_headphones')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+        
+        <record id="wt_product_product_headphones_5" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_headphones')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+        
+        <record id="wt_product_product_headphones_6" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_headphones')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+        
+        <record id="wt_product_airpods_1" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_airpods')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+        
+        <record id="wt_product_airpods_2" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_airpods')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+        
+        <record id="wt_product_airpods_3" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_airpods')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+        
+        <record id="wt_product_airpods_4" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_buds')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+        
+        <record id="wt_product_airpods_5" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_buds')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+        
+        <record id="wt_product_airpods_6" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_buds')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+        
+        <record id="wt_product_airpods_7" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_airpods')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <!-- Leptop -->
+        
+        <record id="wt_product_leptop_1" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_leptops')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+        
+        <record id="wt_product_leptop_2" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_leptops')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+        
+        <record id="wt_product_leptop_3" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_leptops')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+        
+        <record id="wt_product_leptop_4" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_leptops')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+        
+        <record id="wt_product_template_macbook_16" model="product.template">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_leptops')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+        
+            <!-- Desktop -->
+        <record id="wt_product_ldesktop_1" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_desktop')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+        
+        <record id="wt_product_ldesktop_2" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_desktop')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+        
+        <record id="wt_product_ldesktop_3" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_desktop')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+        
+        <record id="wt_product_ldesktop_4" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_desktop')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+        
+        <record id="wt_product_ldesktop_5" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_desktop')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+        
+        <record id="wt_product_ldesktop_6" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_desktop')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <!-- Assign public category and publish Smart TVs -->
+        <record id="wt_product_smart_tv_1" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_smart_tvs')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <record id="wt_product_smart_tv_2" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_smart_tvs')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <record id="wt_product_smart_tv_3" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_smart_tvs')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <record id="wt_product_smart_tv_4" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_smart_tvs')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <record id="wt_product_smart_tv_5" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_smart_tvs')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <record id="wt_product_smart_tv_6" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_smart_tvs')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <record id="wt_product_smart_tv_7" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_smart_tvs')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <record id="wt_product_smart_tv_8" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_smart_tvs')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <record id="wt_product_smart_tv_9" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_smart_tvs')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <record id="wt_product_smart_tv_10" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_smart_tvs')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <record id="wt_product_smart_tv_11" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_smart_tvs')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <record id="wt_product_smart_tv_12" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_smart_tvs')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <record id="wt_product_smart_tv_13" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_smart_tvs')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <record id="wt_product_smart_tv_14" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_smart_tvs')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <!-- Refrigerators -->
+
+        <!-- Samsung Refrigerators -->
+
+        <!-- 1. Single Door -->
+        <record id="wt_product_refrigerator_1" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_refrigerators_single_door')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <record id="wt_product_refrigerator_2" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_refrigerators_single_door')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <!-- 2. Double Door -->
+        <record id="wt_product_refrigerator_3" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_refrigerators_double_door')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <!-- 3. Four Door -->
+        <record id="wt_product_refrigerator_4" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_refrigerators_triple_door')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <record id="wt_product_refrigerator_5" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_refrigerators_triple_door')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <record id="wt_product_refrigerator_6" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_refrigerators_triple_door')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <!-- 4. Side by Side -->
+        <record id="wt_product_refrigerator_7" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_refrigerators_side_by_side')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <record id="wt_product_refrigerator_8" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_refrigerators_side_by_side')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <record id="wt_product_refrigerator_9" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_refrigerators_side_by_side')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <record id="wt_product_refrigerator_10" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_refrigerators_side_by_side')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <!-- 5. Convertible -->
+        <record id="wt_product_refrigerator_11" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_refrigerators_convertible')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <record id="wt_product_refrigerator_12" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_refrigerators_convertible')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <record id="wt_product_refrigerator_13" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_refrigerators_convertible')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+    <!-- Public Category Mapping for Air Conditioners -->
+
+        <!-- Inverter AC -->
+        <record id="wt_product_airconditioner_1" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_air_conditioners_inverter_ac')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <!-- Split ACs -->
+        <record id="wt_product_airconditioner_2" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_air_conditioners_split_ac')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <record id="wt_product_airconditioner_3" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_air_conditioners_split_ac')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <record id="wt_product_airconditioner_6" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_air_conditioners_split_ac')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <!-- Window ACs -->
+        <record id="wt_product_airconditioner_4" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_air_conditioners_window_ac')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <record id="wt_product_airconditioner_5" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_air_conditioners_window_ac')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <!-- Public Category Mapping for Washing Machines -->
+
+        <!-- Fully Automatic Front Load -->
+        <record id="wt_product_washing_machine_1" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_washing_machine_front_load')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <record id="wt_product_washing_machine_4" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_washing_machine_front_load')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <!-- Semi Automatic Top Load -->
+        <record id="wt_product_washing_machine_2" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_washing_machine_semi_automatic')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <!-- Fully Automatic Top Load -->
+        <record id="wt_product_washing_machine_3" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_washing_machine_top_load')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <!-- Gaming Accessories -->
+
+        <record id="wt_product_gaming_1" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('wt_product_game_accessories')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <record id="wt_product_gaming_2" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('wt_product_game_accessories')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <record id="wt_product_gaming_3" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('wt_product_game_accessories')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <record id="wt_product_gaming_4" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('wt_product_game_accessories')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <record id="wt_product_gaming_5" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('wt_product_game_accessories')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <record id="wt_product_gaming_6" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('wt_product_game_accessories')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <record id="wt_product_gaming_7" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('wt_product_game_accessories')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <record id="wt_product_gaming_8" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('wt_product_game_accessories')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <record id="wt_product_gaming_9" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('wt_product_game_accessories')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <record id="wt_product_gaming_10" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('wt_product_game_accessories')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <record id="wt_product_gaming_11" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('wt_product_game_accessories')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <record id="wt_product_gaming_12" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('wt_product_game_accessories')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <record id="wt_product_gaming_13" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('wt_product_game_accessories')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <record id="wt_product_gaming_14" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('wt_product_game_accessories')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+                <!-- Bose Portable Smart Speaker -->
+        <record id="wt_product_speaker_01" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_speakers_bluetooth')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <!-- Bose SoundLink Flex Bluetooth Speaker -->
+        <record id="wt_product_speaker_06" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_speakers_bluetooth')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <!-- Bose SoundLink Max Portable Speaker -->
+        <record id="wt_product_speaker_07" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_speakers_bluetooth')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <!-- Bose SoundLink Revolve Bluetooth Speaker -->
+        <record id="wt_product_speaker_08" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_speakers_bluetooth')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <!-- Bose Smart Soundbar 300 -->
+        <record id="wt_product_soundbar_02" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_speakers_soundbars')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <!-- Bose Smart Soundbar 700 -->
+        <record id="wt_product_soundbar_03" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_speakers_soundbars')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <!-- Bose Smart Ultra Soundbar -->
+        <record id="wt_product_soundbar_05" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_speakers_soundbars')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <!-- Bose Smart Speaker 500 -->
+        <record id="wt_product_homeaudio_04" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_speakers_home_audio')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <!-- Bose Lifestyle 600 Home Entertainment System -->
+        <record id="wt_product_hometheatre_10" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_speakers_home_theatres')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        <!-- Bose F1 Model 812 Flexible Array Loudspeaker -->
+        <record id="wt_product_loudspeaker_09" model="product.product">
+            <field name="public_categ_ids" eval="[(6, 0, [ref('public_category_speakers_home_audio')])]"/>
+            <field name="is_published" eval="True"/>
+        </record>
+
+        
+    </data>
+    
+</odoo>

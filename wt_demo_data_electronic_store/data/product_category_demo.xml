@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo noupdate="0">
+
+    <!-- Root Category: Electronics -->
+    <record id="wt_product_category_1" model="product.category">
+        <field name="parent_id" ref="product.product_category_1"/>
+        <field name="name">Electronics</field>
+    </record>
+
+    <!-- Mobiles -->
+    <record id="wt_product_category_1_1" model="product.category">
+        <field name="parent_id" ref="wt_product_category_1"/>
+        <field name="name">Mobiles</field>
+    </record>
+
+    <!-- Mobile Accessories -->
+    <record id="wt_product_category_1_2" model="product.category">
+        <field name="parent_id" ref="wt_product_category_1"/>
+        <field name="name">Mobile Accessories</field>
+    </record>
+    <record id="wt_product_category_1_2_1" model="product.category">
+        <field name="parent_id" ref="wt_product_category_1_2"/>
+        <field name="name">Mobile Cases</field>
+    </record>
+    <record id="wt_product_category_1_2_2" model="product.category">
+        <field name="parent_id" ref="wt_product_category_1_2"/>
+        <field name="name">Power Banks</field>
+    </record>
+    <record id="wt_product_category_1_2_3" model="product.category">
+        <field name="parent_id" ref="wt_product_category_1_2"/>
+        <field name="name">Screenguards</field>
+    </record>
+    <record id="wt_product_category_1_2_4" model="product.category">
+        <field name="parent_id" ref="wt_product_category_1_2"/>
+        <field name="name">Memory Cards</field>
+    </record>
+    <record id="wt_product_category_1_2_5" model="product.category">
+        <field name="parent_id" ref="wt_product_category_1_2"/>
+        <field name="name">Mobile Cables</field>
+    </record>
+    <record id="wt_product_category_1_2_6" model="product.category">
+        <field name="parent_id" ref="wt_product_category_1_2"/>
+        <field name="name">Mobile Chargers</field>
+    </record>
+
+    <!-- Smart Wearable Tech -->
+    <record id="wt_product_category_1_3" model="product.category">
+        <field name="parent_id" ref="wt_product_category_1"/>
+        <field name="name">Smart Wearable Tech</field>
+    </record>   
+    <record id="wt_product_category_1_3_1" model="product.category">
+        <field name="parent_id" ref="wt_product_category_1_3"/>
+        <field name="name">Smart Watches</field>
+    </record>
+    <record id="wt_product_category_1_3_2" model="product.category">
+        <field name="parent_id" ref="wt_product_category_1_3"/>
+        <field name="name">Smart Glasses (VR)</field>
+    </record>
+    <record id="wt_product_category_1_3_3" model="product.category">
+        <field name="parent_id" ref="wt_product_category_1_3"/>
+        <field name="name">Smart Bands</field>
+    </record>
+
+    <!-- Tablets -->
+    <record id="wt_product_category_1_4" model="product.category">
+        <field name="parent_id" ref="wt_product_category_1"/>
+        <field name="name">Tablets</field>
+    </record>
+
+    <!-- Health Care Appliances -->
+    <record id="wt_product_category_1_5" model="product.category">
+        <field name="parent_id" ref="wt_product_category_1"/>
+        <field name="name">Health Care Appliances</field>
+    </record>
+
+    <!-- Cameras -->
+    <record id="wt_product_category_1_6" model="product.category">
+        <field name="parent_id" ref="wt_product_category_1"/>
+        <field name="name">Camera</field>
+    </record>
+    <record id="wt_product_category_1_6_1" model="product.category">
+        <field name="parent_id" ref="wt_product_category_1_6"/>
+        <field name="name">DSLR And Mirrorless</field>
+    </record>
+    <record id="wt_product_category_1_6_2" model="product.category">
+        <field name="parent_id" ref="wt_product_category_1_6"/>
+        <field name="name">Compact And Bridge Cameras</field>
+    </record>
+    <record id="wt_product_category_1_6_3" model="product.category">
+        <field name="parent_id" ref="wt_product_category_1_6"/>
+        <field name="name">Sports And Action</field>
+    </record>
+
+    <!-- Camera Accessories -->
+    <record id="wt_product_category_1_7" model="product.category">
+        <field name="parent_id" ref="wt_product_category_1"/>
+        <field name="name">Camera Accessories</field>
+    </record>
+    <record id="wt_product_category_1_7_1" model="product.category">
+        <field name="parent_id" ref="wt_product_category_1_7"/>
+        <field name="name">Lens</field>
+    </record>
+    <record id="wt_product_category_1_7_2" model="product.category">
+        <field name="parent_id" ref="wt_product_category_1_7"/>
+        <field name="name">Tripods</field>
+    </record>
+
+    <!-- Headphones -->
+    <record id="wt_product_category_1_8" model="product.category">
+        <field name="parent_id" ref="wt_product_category_1"/>
+        <field name="name">Headphones</field>
+    </record>
+    <record id="wt_product_category_1_8_1" model="product.category">
+        <field name="parent_id" ref="wt_product_category_1_8"/>
+        <field name="name">Air-Pods</field>
+    </record>
+
+    <!-- Gaming -->
+    <record id="wt_product_category_1_9" model="product.category">
+        <field name="parent_id" ref="wt_product_category_1"/>
+        <field name="name">Gaming And Accessories</field>
+    </record>
+
+    <!-- Laptops & Desktops -->
+    <record id="wt_product_category_1_10" model="product.category">
+        <field name="parent_id" ref="wt_product_category_1"/>
+        <field name="name">Laptops</field>
+    </record>
+    <record id="wt_product_category_1_11" model="product.category">
+        <field name="parent_id" ref="wt_product_category_1"/>
+        <field name="name">Desktop PCs</field>
+    </record>
+
+    <!-- Computer Accessories -->
+    <record id="wt_product_category_1_12" model="product.category">
+        <field name="parent_id" ref="wt_product_category_1"/>
+        <field name="name">Computer Accessories</field>
+    </record>
+    <record id="wt_product_category_1_12_1" model="product.category">
+        <field name="parent_id" ref="wt_product_category_1_12"/>
+        <field name="name">External Hard Disks</field>
+    </record>
+    <record id="wt_product_category_1_12_2" model="product.category">
+        <field name="parent_id" ref="wt_product_category_1_12"/>
+        <field name="name">Pendrives</field>
+    </record>
+    <record id="wt_product_category_1_12_3" model="product.category">
+        <field name="parent_id" ref="wt_product_category_1_12"/>
+        <field name="name">Laptop Skins And Decals</field>
+    </record>
+    <record id="wt_product_category_1_12_4" model="product.category">
+        <field name="parent_id" ref="wt_product_category_1_12"/>
+        <field name="name">Laptop Bags</field>
+    </record>
+    <record id="wt_product_category_1_12_5" model="product.category">
+        <field name="parent_id" ref="wt_product_category_1_12"/>
+        <field name="name">Mouse</field>
+    </record>
+
+    <!-- Computer Peripherals -->
+    <record id="wt_product_category_1_13" model="product.category">
+        <field name="parent_id" ref="wt_product_category_1"/>
+        <field name="name">Computer Peripherals</field>
+    </record>
+    <record id="wt_product_category_1_13_1" model="product.category">
+        <field name="parent_id" ref="wt_product_category_1_13"/>
+        <field name="name">Printers And Ink Cartridges</field>
+    </record>
+    <record id="wt_product_category_1_13_2" model="product.category">
+        <field name="parent_id" ref="wt_product_category_1_13"/>
+        <field name="name">Monitors</field>
+    </record>
+
+    <!-- Television -->
+    <record id="wt_product_category_1_14" model="product.category">
+        <field name="parent_id" ref="wt_product_category_1"/>
+        <field name="name">Smart TVs</field>
+    </record>
+
+    <!-- Washing Machine -->
+    <record id="wt_product_category_1_15" model="product.category">
+        <field name="parent_id" ref="wt_product_category_1"/>
+        <field name="name">Washing Machine</field>
+    </record>
+    <record id="wt_product_category_1_15_1" model="product.category">
+        <field name="parent_id" ref="wt_product_category_1_15"/>
+        <field name="name">Fully Automatic Front Load</field>
+    </record>
+    <record id="wt_product_category_1_15_2" model="product.category">
+        <field name="parent_id" ref="wt_product_category_1_15"/>
+        <field name="name">Semi Automatic Top Load</field>
+    </record>
+    <record id="wt_product_category_1_15_3" model="product.category">
+        <field name="parent_id" ref="wt_product_category_1_15"/>
+        <field name="name">Fully Automatic Top Load</field>
+    </record>
+
+    <!-- Air Conditioners -->
+    <record id="wt_product_category_1_16" model="product.category">
+        <field name="parent_id" ref="wt_product_category_1"/>
+        <field name="name">Air Conditioners</field>
+    </record>
+    <record id="wt_product_category_1_16_1" model="product.category">
+        <field name="parent_id" ref="wt_product_category_1_16"/>
+        <field name="name">Inverter AC</field>
+    </record>
+    <record id="wt_product_category_1_16_2" model="product.category">
+        <field name="parent_id" ref="wt_product_category_1_16"/>
+        <field name="name">Split ACs</field>
+    </record>
+    <record id="wt_product_category_1_16_3" model="product.category">
+        <field name="parent_id" ref="wt_product_category_1_16"/>
+        <field name="name">Window ACs</field>
+    </record>
+
+    <!-- Refrigerators -->
+    <record id="wt_product_category_1_17" model="product.category">
+        <field name="parent_id" ref="wt_product_category_1"/>
+        <field name="name">Refrigerators</field>
+    </record>
+    <record id="wt_product_category_1_17_1" model="product.category">
+        <field name="parent_id" ref="wt_product_category_1_17"/>
+        <field name="name">Single Door</field>
+    </record>
+    <record id="wt_product_category_1_17_2" model="product.category">
+        <field name="parent_id" ref="wt_product_category_1_17"/>
+        <field name="name">Double Door</field>
+    </record>
+    <record id="wt_product_category_1_17_3" model="product.category">
+        <field name="parent_id" ref="wt_product_category_1_17"/>
+        <field name="name">Four Door</field>
+    </record>
+    <record id="wt_product_category_1_17_4" model="product.category">
+        <field name="parent_id" ref="wt_product_category_1_17"/>
+        <field name="name">Side by Side</field>
+    </record>
+    <record id="wt_product_category_1_17_5" model="product.category">
+        <field name="parent_id" ref="wt_product_category_1_17"/>
+        <field name="name">Convertible</field>
+    </record>
+
+    <!-- Kitchen   Appliances -->
+    <record id="wt_product_category_1_18" model="product.category">
+        <field name="parent_id" ref="wt_product_category_1"/>
+        <field name="name">Kitchen Appliances</field>
+    </record>
+    <record id="wt_product_category_1_18_1" model="product.category">
+        <field name="parent_id" ref="wt_product_category_1_18"/>
+        <field name="name">Microwave Ovens</field>
+    </record>
+    
+    <record id="wt_product_category_1_18_2" model="product.category">
+        <field name="parent_id" ref="wt_product_category_1_18"/>
+        <field name="name">Oven Toaster Grills (OTG)</field>
+    </record>
+    
+    <record id="wt_product_category_1_18_3" model="product.category">
+        <field name="parent_id" ref="wt_product_category_1_18"/>
+        <field name="name">Juicer/Mixer/Grinder</field>
+    </record>
+    
+    <record id="wt_product_category_1_18_4" model="product.category">
+        <field name="parent_id" ref="wt_product_category_1_18"/>
+        <field name="name">Electric Kettle</field>
+    </record>
+    
+    <record id="wt_product_category_1_18_5" model="product.category">
+        <field name="parent_id" ref="wt_product_category_1_18"/>
+        <field name="name">Induction Cooktops</field>
+    </record>
+    
+    <record id="wt_product_category_1_18_6" model="product.category">
+        <field name="parent_id" ref="wt_product_category_1_18"/>
+        <field name="name">Chimneys</field>
+    </record>
+    
+    <record id="wt_product_category_1_18_7" model="product.category">
+        <field name="parent_id" ref="wt_product_category_1_18"/>
+        <field name="name">Hand Blenders</field>
+    </record>
+    
+    <record id="wt_product_category_1_18_8" model="product.category">
+        <field name="parent_id" ref="wt_product_category_1_18"/>
+        <field name="name">Sandwich Makers</field>
+    </record>
+    
+    <record id="wt_product_category_1_18_9" model="product.category">
+        <field name="parent_id" ref="wt_product_category_1_18"/>
+        <field name="name">Pop Up Toasters</field>
+    </record>
+    
+    <record id="wt_product_category_1_18_10" model="product.category">
+        <field name="parent_id" ref="wt_product_category_1_18"/>
+        <field name="name">Electric Cookers</field>
+    </record>
+    
+    <record id="wt_product_category_1_18_11" model="product.category">
+        <field name="parent_id" ref="wt_product_category_1_18"/>
+        <field name="name">Wet Grinders</field>
+    </record>
+    
+    <record id="wt_product_category_1_18_12" model="product.category">
+        <field name="parent_id" ref="wt_product_category_1_18"/>
+        <field name="name">Food Processors</field>
+    </record>
+    
+    <record id="wt_product_category_1_18_13" model="product.category">
+        <field name="parent_id" ref="wt_product_category_1_18"/>
+        <field name="name">Coffee Makers</field>
+    </record>
+    
+    <record id="wt_product_category_1_18_14" model="product.category">
+        <field name="parent_id" ref="wt_product_category_1_18"/>
+        <field name="name">Dishwashers</field>
+    </record>
+
+     <!--  Small Home Appliances -->
+
+    <record id="wt_product_category_1_19" model="product.category">
+        <field name="parent_id" ref="wt_product_category_1"/>
+        <field name="name">Small Home Appliances</field>
+    </record>
+
+    <record id="wt_product_category_1_19_1" model="product.category">
+        <field name="parent_id" ref="wt_product_category_1_19"/>
+        <field name="name">Irons</field>
+    </record>
+    
+    <record id="wt_product_category_1_19_2" model="product.category">
+        <field name="parent_id" ref="wt_product_category_1_19"/>
+        <field name="name">Water Purifiers</field>
+    </record>
+    
+    <record id="wt_product_category_1_19_3" model="product.category">
+        <field name="parent_id" ref="wt_product_category_1_19"/>
+        <field name="name">Fans</field>
+    </record>
+    
+    <record id="wt_product_category_1_19_4" model="product.category">
+        <field name="parent_id" ref="wt_product_category_1_19"/>
+        <field name="name">Air Coolers</field>
+    </record>
+    
+    <record id="wt_product_category_1_19_5" model="product.category">
+        <field name="parent_id" ref="wt_product_category_1_19"/>
+        <field name="name">Inverters</field>
+    </record>
+    
+    <record id="wt_product_category_1_19_6" model="product.category">
+        <field name="parent_id" ref="wt_product_category_1_19"/>
+        <field name="name">Vacuum Cleaners</field>
+    </record>
+    
+    <record id="wt_product_category_1_19_7" model="product.category">
+        <field name="parent_id" ref="wt_product_category_1_19"/>
+        <field name="name">Sewing Machines</field>
+    </record>
+    
+    <record id="wt_product_category_1_19_8" model="product.category">
+        <field name="parent_id" ref="wt_product_category_1_19"/>
+        <field name="name">Voltage Stabilizers</field>
+    </record>
+    
+    <record id="wt_product_category_1_19_9" model="product.category">
+        <field name="parent_id" ref="wt_product_category_1_19"/>
+        <field name="name">Water Geysers</field>
+    </record>
+    
+    <record id="wt_product_category_1_19_10" model="product.category">
+        <field name="parent_id" ref="wt_product_category_1_19"/>
+        <field name="name">Immersion Rods</field>
+    </record>
+
+    <!-- Speakers -->
+    <record id="wt_product_category_1_20" model="product.category">
+        <field name="parent_id" ref="wt_product_category_1"/>
+        <field name="name">Speakers</field>
+    </record>
+    <record id="wt_product_category_1_20_1" model="product.category">
+        <field name="parent_id" ref="wt_product_category_1_20"/>
+        <field name="name">Home Audio Speakers</field>
+    </record>
+    <record id="wt_product_category_1_20_2" model="product.category">
+        <field name="parent_id" ref="wt_product_category_1_20"/>
+        <field name="name">Home Theatres</field>
+    </record>
+    <record id="wt_product_category_1_20_3" model="product.category">
+        <field name="parent_id" ref="wt_product_category_1_20"/>
+        <field name="name">Soundbars</field>
+    </record>
+    <record id="wt_product_category_1_20_4" model="product.category"> 
+        <field name="parent_id" ref="wt_product_category_1_20"/>
+        <field name="name">Bluetooth Speakers</field>
+    </record>
+
+</odoo>
