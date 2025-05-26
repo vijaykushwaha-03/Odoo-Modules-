@@ -3015,6 +3015,27 @@
             <field name="image_1920" type="base64" file="wt_demo_data_electronic_store/static/img/speakers/Bose-Portable-Smart-Speaker.webp"/>
         </record>
 
+        <record id="wt_product_speaker_01_img_1" model="product.image">
+            <field name="product_variant_id" ref="wt_product_speaker_01"/>
+            <field name="name">Side View</field>
+            <field name="image_1920" type="base64" file="wt_demo_data_electronic_store/static/img/speakers/boss-protable-2.webp"/>
+            <field name="sequence">10</field>
+        </record>
+
+        <record id="wt_product_speaker_01_img_2" model="product.image">
+            <field name="product_variant_id" ref="wt_product_speaker_01"/>
+            <field name="name">Side View</field>
+            <field name="image_1920" type="base64" file="wt_demo_data_electronic_store/static/img/speakers/boss-protable-3.webp"/>
+            <field name="sequence">10</field>
+        </record>
+
+        <record id="wt_product_speaker_01_img_3" model="product.image">
+            <field name="product_variant_id" ref="wt_product_speaker_01"/>
+            <field name="name">Side View</field>
+            <field name="image_1920" type="base64" file="wt_demo_data_electronic_store/static/img/speakers/boss-protable-4.webp"/>
+            <field name="sequence">10</field>
+        </record>
+        
         <!-- Bose SoundLink Flex Bluetooth Speaker -->
         <record id="wt_product_speaker_06" model="product.product">
             <field name="name">Bose SoundLink Flex Bluetooth Speaker</field>
@@ -3127,6 +3148,27 @@
             <field name="image_1920" type="base64" file="wt_demo_data_electronic_store/static/img/speakers/Lifestyle600homeentertainmentsyste.webp"/>
         </record>
 
+        <record id="wt_product_hometheatre_10_img_1" model="product.image">
+            <field name="product_variant_id" ref="wt_product_hometheatre_10"/>
+            <field name="name">Side View</field>
+            <field name="image_1920" type="base64" file="wt_demo_data_electronic_store/static/img/speakers/boss-theator-2.webp"/>
+            <field name="sequence">10</field>
+        </record>
+
+        <record id="wt_product_hometheatre_10_img_2" model="product.image">
+            <field name="product_variant_id" ref="wt_product_hometheatre_10"/>
+            <field name="name">Side View</field>
+            <field name="image_1920" type="base64" file="wt_demo_data_electronic_store/static/img/speakers/boss-theator-3.webp"/>
+            <field name="sequence">20</field>
+        </record>
+
+        <record id="wt_product_hometheatre_10_img_3" model="product.image">
+            <field name="product_variant_id" ref="wt_product_hometheatre_10"/>
+            <field name="name">Side View</field>
+            <field name="image_1920" type="base64" file="wt_demo_data_electronic_store/static/img/speakers/boss-theator-4.webp"/>
+            <field name="sequence">30</field>
+        </record>
+
         <!-- Bose F1 Model 812 Flexible Array Loudspeaker -->
         <record id="wt_product_loudspeaker_09" model="product.product">
             <field name="name">Bose F1 Model 812 Flexible Array Loudspeaker</field>
@@ -3140,7 +3182,6 @@
             <field name="description_sale">Flexible array loudspeaker with advanced technology for professional sound quality.</field>
             <field name="image_1920" type="base64" file="wt_demo_data_electronic_store/static/img/speakers/F1-Model-812-Flexible-Array-loudspeaker.webp"/>
         </record>
-
 
                 <!-- Apple Magic Mouse -->
         <record id="wt_product_computer_accessory_01" model="product.product">
