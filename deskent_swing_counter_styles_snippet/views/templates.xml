@@ -1,0 +1,633 @@
+<odoo>
+    <data>
+      <template id="style1">
+        <section class="counter">
+            <div class="container style1">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="counter-box colored">
+                            <i class="fa fa-thumbs-o-up"></i>
+                            <span class="counter">2147</span>
+                            <p>Happy Customers</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="counter-box">
+                            <i class="fa fa-group"></i>
+                            <span class="counter">3275</span>
+                            <p>Registered Members</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="counter-box">
+                            <i class="fa fa-shopping-cart"></i>
+                            <span class="counter">289</span>
+                            <p>Available Products</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="counter-box">
+                            <i class="fa fa-user"></i>
+                            <span class="counter">1563</span>
+                            <p>Saved Trees</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+      </template>
+        <template id="style2">
+          <section class="wow fadeIn animated" style="visibility: visible; animation-name: fadeIn;">
+              <div class="container style2">
+                  <div class="row">
+                      <div class="col-md-3 col-sm-6 bottom-margin text-center counter-section wow fadeInUp animated" data-wow-duration="300ms" style="visibility: visible; animation-duration: 300ms; animation-name: fadeInUp;">
+                          <i class="fa fa-beer medium-icon"></i>
+                          <span class="timer counter" data-to="2800" data-speed="7000">2800</span>
+                          <p class="counter-title">Beer Ordered</p>
+                      </div>
+                      <div class="col-md-3 col-sm-6 bottom-margin text-center counter-section wow fadeInUp animated" data-wow-duration="600ms" style="visibility: visible; animation-duration: 600ms; animation-name: fadeInUp;">
+                          <i class="fa fa-heart medium-icon"></i>
+                          <span class="timer counter" data-to="980" data-speed="7000">980</span>
+                          <p class="counter-title">Happy Clients</p>
+                      </div>
+                      <div class="col-md-3 col-sm-6 bottom-margin text-center counter-section wow fadeInUp animated" data-wow-duration="900ms" style="visibility: visible; animation-duration: 900ms; animation-name: fadeInUp;">
+                          <i class="fa fa-anchor medium-icon"></i>
+                          <span class="timer counter" data-to="810" data-speed="7000">810</span>
+                          <p class="counter-title">Projects Completed</p>
+                      </div>
+                      <div class="col-md-3 col-sm-6 text-center counter-section wow fadeInUp animated" data-wow-duration="1200ms" style="visibility: visible; animation-duration: 1200ms; animation-name: fadeInUp;">
+                          <i class="fa fa-user medium-icon"></i>
+                          <span class="timer counter" data-to="600" data-speed="7000">600</span>
+                          <p class="counter-title">Clients Served</p>
+                      </div>
+                  </div>
+              </div>
+          </section>
+      </template>
+      <template id="style3">
+       <section class="counter">
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            <div class="main_counter_area">
+                <div class="overlay p-y-3">
+                    <div class="container">
+                        <div class="row">
+                            <div class="main_counter_content text-center white-text wow fadeInUp">
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="single_counter p-y-2 m-t-1">
+                                        <i class="fa fa-briefcase m-b-1"></i>
+                                        <h2 class="statistic-counter">200</h2>
+                                        <p>Study</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="single_counter p-y-2 m-t-1">
+                                        <i class="fa fa-check m-b-1"></i>
+                                        <h2 class="statistic-counter">1000</h2>
+                                        <p>Checked</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="single_counter p-y-2 m-t-1">
+                                        <i class="fa fa-coffee m-b-1"></i>
+                                        <h2 class="statistic-counter">500</h2>
+                                        <p>Coffee</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="single_counter p-y-2 m-t-1">
+                                        <i class="fa fa-beer m-b-1"></i>
+                                        <h2 class="statistic-counter">400</h2>
+                                        <p>Pizzas</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+      </template>
+      <template id="style4">
+        <section class="style4">
+        <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"/>
+         <div class="container style4">
+            <div class="row text-center">
+                <div class="col-md-3 col-sm-6">
+                    <div class="counter">
+                        <i class="fa fa-code fa-2x"></i>
+                        <h2 class="timer count-title count-number" data-to="100" data-speed="1500"></h2>
+                        <p class="count-text">Our Customer</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="counter">
+                        <i class="fa fa-coffee fa-2x"></i>
+                        <h2 class="timer count-title count-number" data-to="1700" data-speed="1500"></h2>
+                        <p class="count-text">Happy Clients</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="counter">
+                        <i class="fa fa-lightbulb-o fa-2x"></i>
+                        <h2 class="timer count-title count-number" data-to="11900" data-speed="1500"></h2>
+                        <p class="count-text">Project Complete</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="counter">
+                        <i class="fa fa-bug fa-2x"></i>
+                        <h2 class="timer count-title count-number" data-to="157" data-speed="1500"></h2>
+                        <p class="count-text">Coffee With Clients</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
+      </template>
+      <template id="style5">
+        <section class="style5">
+          <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css"/>
+          <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+          <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"/>
+          <div class="container style5">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card-counter primary">
+                        <i class="fa fa-code-fork"></i>
+                        <span class="count-numbers">12</span>
+                        <span class="count-name">Flowz</span>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="card-counter danger">
+                        <i class="fa fa-ticket"></i>
+                        <span class="count-numbers">599</span>
+                        <span class="count-name">Instances</span>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="card-counter success">
+                        <i class="fa fa-database"></i>
+                        <span class="count-numbers">6875</span>
+                        <span class="count-name">Data</span>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="card-counter info">
+                        <i class="fa fa-users"></i>
+                        <span class="count-numbers">35</span>
+                        <span class="count-name">Users</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
+      </template>
+      <template id="style6">
+        <section id="style6" class="sec-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="count">
+                            <span class="fa fa-smile-o"></span>
+                            <p class="number">126</p>
+                            <h4>Happy Clients</h4>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="count">
+                            <span class="fa fa-smile-o"></span>
+                            <p class="number">535</p>
+                            <h4>Awards</h4>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="count">
+                            <span class="fa fa-smile-o"></span>
+                            <p class="number">896</p>
+                            <h4>Total Hours</h4>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="count">
+                            <span class="fa fa-smile-o"></span>
+                            <p class="number">777</p>
+                            <h4>Projects Complete</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+      </template>
+      <template id="style7">
+        <section class="style7">
+        <div id="style7" class="sectionClass">
+            <div class="container">
+                <div class="row projectFactsWrap">
+                    <div class="col-md-3 col-sm-6 item wow fadeInUpBig" data-number="12">
+                        <i class="fa fa-briefcase"></i>
+                        <p id="number1" class="number">12</p>
+                        <p>Projects done</p>
+                    </div>
+                    <div class="col-md-3 col-sm-6 item wow fadeInUpBig" data-number="55">
+                        <i class="fa fa-smile-o"></i>
+                        <p id="number2" class="number">55</p>
+                        <p>Happy clients</p>
+                    </div>
+                    <div class="col-md-3 col-sm-6 item wow fadeInUpBig" data-number="359">
+                        <i class="fa fa-coffee"></i>
+                        <p id="number3" class="number">359</p>
+                        <p>Cups of coffee</p>
+                    </div>
+                    <div class="col-md-3 col-sm-6 item wow fadeInUpBig" data-number="246">
+                        <i class="fa fa-camera"></i>
+                        <p id="number4" class="number">246</p>
+                        <p>Photos taken</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
+      </template>
+      <template id="style8">
+        <section class="style8">
+           <div class="style8">
+              <div class="container">
+                  <div class="row">
+                      <div class="col-md-3 col-sm-6">
+                          <div class="counter">
+                              <div class="counter-content">
+                                  <div class="counter-icon">
+                                      <i class="fa fa-globe"></i>
+                                  </div>
+                                  <h3>Web Designing</h3>
+                              </div>
+                              <span class="counter-value">1963</span>
+                          </div>
+                      </div>
+                      <div class="col-md-3 col-sm-6">
+                          <div class="counter green">
+                              <div class="counter-content">
+                                  <div class="counter-icon">
+                                      <i class="fa fa-rocket"></i>
+                                  </div>
+                                  <h3>Web Development</h3>
+                              </div>
+                              <span class="counter-value">1854</span>
+                          </div>
+                      </div>
+                      <div class="col-md-3 col-sm-6">
+                          <div class="counter blue">
+                              <div class="counter-content">
+                                  <div class="counter-icon">
+                                      <i class="fa fa-user"></i>
+                                  </div>
+                                  <h3>Brand Building</h3>
+                              </div>
+                              <span class="counter-value">1756</span>
+                          </div>
+                      </div>
+                      <div class="col-md-3 col-sm-6">
+                          <div class="counter gray">
+                              <div class="counter-content">
+                                  <div class="counter-icon">
+                                      <i class="fa fa-briefcase"></i>
+                                  </div>
+                                  <h3>Responsive Design</h3>
+                              </div>
+                              <span class="counter-value">1823</span>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </section>
+      </template>
+      <template id="style9">
+        <section class="style9">
+          <div class="style9">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="counter">
+                            <span class="counter-value">1963</span>
+                            <h3>Web Designing</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="counter red">
+                            <span class="counter-value">1854</span>
+                            <h3>Web Development</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="counter pink">
+                            <span class="counter-value">1756</span>
+                            <h3>Brand Building</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="counter blue">
+                            <span class="counter-value">1823</span>
+                            <h3>Responsive Design</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
+      </template>
+      <template id="style10">
+        <section class="style10">
+         <div class="style10">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="counter">
+                            <span class="counter-value">1963</span>
+                            <h3>Web Designing</h3>
+                            <div class="counter-icon">
+                                <i class="fa fa-briefcase"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="counter purple">
+                            <span class="counter-value">1854</span>
+                            <h3>Web Development</h3>
+                            <div class="counter-icon">
+                                <i class="fa fa-globe"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="counter magenta">
+                            <span class="counter-value">1756</span>
+                            <h3>Brand Building</h3>
+                            <div class="counter-icon">
+                                <i class="fa fa-users"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="counter yellow">
+                            <span class="counter-value">1823</span>
+                            <h3>Responsive Design</h3>
+                            <div class="counter-icon">
+                                <i class="fa fa-mobile"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </section>
+      </template>
+      <template id="style11">
+        <section class="style11">
+           <div class="style11">
+              <div class="container">
+                  <div class="row">
+                      <div class="col-md-3 col-sm-6">
+                          <div class="counter">
+                              <span class="counter-value">1963</span>
+                              <h3>Web Designing</h3>
+                              <div class="counter-icon"><i class="fa fa-globe"></i></div>
+                          </div>
+                      </div>
+                      <div class="col-md-3 col-sm-6">
+                          <div class="counter red">
+                              <span class="counter-value">1854</span>
+                              <h3>Web Development</h3>
+                              <div class="counter-icon"><i class="fa fa-rocket"></i></div>
+                          </div>
+                      </div>
+                      <div class="col-md-3 col-sm-6">
+                          <div class="counter green">
+                              <span class="counter-value">1756</span>
+                              <h3>Brand Building</h3>
+                              <div class="counter-icon"><i class="fa fa-users"></i></div>
+                          </div>
+                      </div>
+                      <div class="col-md-3 col-sm-6">
+                          <div class="counter purple">
+                              <span class="counter-value">1823</span>
+                              <h3>Responsive Design</h3>
+                              <div class="counter-icon"><i class="fa fa-briefcase"></i></div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </section>
+      </template>
+      <template id="style12">
+        <section class="style12">
+            <div class="style12">
+              <div class="container">
+                  <div class="row">
+                      <div class="col-md-3 col-sm-6">
+                          <div class="counter blue">
+                              <div class="counter-icon">
+                                  <span><i class="fa fa-globe"></i></span>
+                              </div>
+                              <h3>Web Designing</h3>
+                              <span class="counter-value">1963</span>
+                          </div>
+                      </div>
+                      <div class="col-md-3 col-sm-6">
+                          <div class="counter red">
+                              <div class="counter-icon">
+                                  <span><i class="fa fa-rocket"></i></span>
+                              </div>
+                              <h3>Web Development</h3>
+                              <span class="counter-value">2056</span>
+                          </div>
+                      </div>
+                      <div class="col-md-3 col-sm-6">
+                          <div class="counter green">
+                              <div class="counter-icon">
+                                  <span><i class="fa fa-user"></i></span>
+                              </div>
+                              <h3>Brand Building</h3>
+                              <span class="counter-value">1756</span>
+                          </div>
+                      </div>
+                      <div class="col-md-3 col-sm-6">
+                          <div class="counter yellow">
+                              <div class="counter-icon">
+                                  <span><i class="fa fa-briefcase"></i></span>
+                              </div>
+                              <h3>Responsive Design</h3>
+                              <span class="counter-value">1823</span>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </section>
+      </template>
+      <template id="style13">
+        <section class="style13">
+           <div class="style13">
+              <div class="container">
+                  <div class="row">
+                      <div class="col-md-3 col-sm-6">
+                          <div class="counter green">
+                              <div class="counter-icon">
+                                  <span><i class="fa fa-globe"></i></span>
+                              </div>
+                              <h3>Web Designing</h3>
+                              <span class="counter-value">1963</span>
+                          </div>
+                      </div>
+                      <div class="col-md-3 col-sm-6">
+                          <div class="counter yellow">
+                              <div class="counter-icon">
+                                  <span><i class="fa fa-rocket"></i></span>
+                              </div>
+                              <h3>Web Development</h3>
+                              <span class="counter-value">2056</span>
+                          </div>
+                      </div>
+                      <div class="col-md-3 col-sm-6">
+                          <div class="counter orange">
+                              <div class="counter-icon">
+                                  <span><i class="fa fa-user"></i></span>
+                              </div>
+                              <h3>Brand Building</h3>
+                              <span class="counter-value">1756</span>
+                          </div>
+                      </div>
+                      <div class="col-md-3 col-sm-6">
+                          <div class="counter blue">
+                              <div class="counter-icon">
+                                  <span><i class="fa fa-briefcase"></i></span>
+                              </div>
+                              <h3>Responsive Design</h3>
+                              <span class="counter-value">1823</span>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </section>
+      </template>
+      <template id="style14">
+        <section class="style14">
+          <div class="style14">
+              <div class="container">
+                  <div class="row">
+                      <div class="col-md-3 col-sm-6">
+                          <div class="counter red">
+                              <div class="counter-icon">
+                                  <span><i class="fa fa-globe"></i></span>
+                              </div>
+                              <h3>Web Designing</h3>
+                              <span class="counter-value">1963</span>
+                          </div>
+                      </div>
+                      <div class="col-md-3 col-sm-6">
+                          <div class="counter orange">
+                              <div class="counter-icon">
+                                  <span><i class="fa fa-rocket"></i></span>
+                              </div>
+                              <h3>Web Development</h3>
+                              <span class="counter-value">1854</span>
+                          </div>
+                      </div>
+                      <div class="col-md-3 col-sm-6">
+                          <div class="counter pink">
+                              <div class="counter-icon">
+                                  <span><i class="fa fa-user"></i></span>
+                              </div>
+                              <h3>Brand Building</h3>
+                              <span class="counter-value">1756</span>
+                          </div>
+                      </div>
+                      <div class="col-md-3 col-sm-6">
+                          <div class="counter blue">
+                              <div class="counter-icon">
+                                  <span><i class="fa fa-briefcase"></i></span>
+                              </div>
+                              <h3>Responsive Design</h3>
+                              <span class="counter-value">1823</span>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </section>
+      </template>
+      <template id="style15">
+        <section class="style15">
+          <div class="style15">
+              <div class="container">
+                  <div class="row">
+                      <div class="col-md-3 col-sm-6">
+                          <div class="counter">
+                              <div class="counter-icon"><i class="fa fa-globe"></i></div>
+                              <span class="counter-value">1963</span>
+                              <h3>Web Designing</h3>
+                          </div>
+                      </div>
+                      <div class="col-md-3 col-sm-6">
+                          <div class="counter yellow">
+                              <div class="counter-icon"><i class="fa fa-rocket"></i></div>
+                              <span class="counter-value">1854</span>
+                              <h3>Web Development</h3>
+                          </div>
+                      </div>
+                      <div class="col-md-3 col-sm-6">
+                          <div class="counter red">
+                              <div class="counter-icon"><i class="fa fa-users"></i></div>
+                              <span class="counter-value">1756</span>
+                              <h3>Brand Building</h3>
+                          </div>
+                      </div>
+                      <div class="col-md-3 col-sm-6">
+                          <div class="counter blue">
+                              <div class="counter-icon"><i class="fa fa-briefcase"></i></div>
+                              <span class="counter-value">1823</span>
+                              <h3>Responsive Design</h3>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </section>
+      </template>
+      <template id="custom_snippets" inherit_id="website.snippets" name="Custom Snippets">
+        <xpath expr="//snippets[@id='snippet_structure']" position="inside">
+            <snippets id="snippet_style" class="o_panel">
+                    <t t-snippet="deskent_swing_counter_styles_snippet.style1" string="Style 1" t-thumbnail="/deskent_swing_counter_styles_snippet/static/img/1.png"/>
+                    <t t-snippet="deskent_swing_counter_styles_snippet.style2" string="style2" t-thumbnail="/deskent_swing_counter_styles_snippet/static/img/2.png"/>
+                    <t t-snippet="deskent_swing_counter_styles_snippet.style3" string="style3" t-thumbnail="/deskent_swing_counter_styles_snippet/static/img/3.png"/>
+                    <t t-snippet="deskent_swing_counter_styles_snippet.style4" string="style4" t-thumbnail="/deskent_swing_counter_styles_snippet/static/img/4.png"/>
+                    <t t-snippet="deskent_swing_counter_styles_snippet.style5" string="style5" t-thumbnail="/deskent_swing_counter_styles_snippet/static/img/5.png"/>   
+                    <t t-snippet="deskent_swing_counter_styles_snippet.style6" string="style6" t-thumbnail="/deskent_swing_counter_styles_snippet/static/img/6.png"/>   
+                    <t t-snippet="deskent_swing_counter_styles_snippet.style7" string="style7" t-thumbnail="/deskent_swing_counter_styles_snippet/static/img/7.png"/>   
+                    <t t-snippet="deskent_swing_counter_styles_snippet.style8" string="style8" t-thumbnail="/deskent_swing_counter_styles_snippet/static/img/8.png"/>
+                    <t t-snippet="deskent_swing_counter_styles_snippet.style9" string="style9" t-thumbnail="/deskent_swing_counter_styles_snippet/static/img/9.png"/>
+                    <t t-snippet="deskent_swing_counter_styles_snippet.style10" string="style10" t-thumbnail="/deskent_swing_counter_styles_snippet/static/img/10.png"/>
+                    <t t-snippet="deskent_swing_counter_styles_snippet.style11" string="style11" t-thumbnail="/deskent_swing_counter_styles_snippet/static/img/11.png"/>
+                    <t t-snippet="deskent_swing_counter_styles_snippet.style12" string="style12" t-thumbnail="/deskent_swing_counter_styles_snippet/static/img/12.png"/>
+                    <t t-snippet="deskent_swing_counter_styles_snippet.style13" string="style13" t-thumbnail="/deskent_swing_counter_styles_snippet/static/img/13.png"/>
+                    <t t-snippet="deskent_swing_counter_styles_snippet.style14" string="style14" t-thumbnail="/deskent_swing_counter_styles_snippet/static/img/14.png"/>
+                    <t t-snippet="deskent_swing_counter_styles_snippet.style15" string="style15" t-thumbnail="/deskent_swing_counter_styles_snippet/static/img/15.png"/>
+            </snippets>
+        </xpath>    
+    </template>
+    <template id="snippet_options" inherit_id="website.snippet_options">
+        <xpath expr="//*[@t-set='so_content_addition_selector']" position="inside">, .basic_snippet</xpath>
+    </template>
+    </data>
+</odoo>

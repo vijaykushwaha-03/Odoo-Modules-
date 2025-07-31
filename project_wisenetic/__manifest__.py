@@ -1,0 +1,12 @@
+{
+    "name":"wisenetic_project",
+    "author":"Wisenetic",
+    "license":"LGPL-3", 
+    "version":"1.0",
+    "data":[      
+        "views/project.xml",     
+        "views/task.xml",
+        "views/wisenetic_menu.xml", 
+        "security/ir.model.access.csv",
+    ]
+ }

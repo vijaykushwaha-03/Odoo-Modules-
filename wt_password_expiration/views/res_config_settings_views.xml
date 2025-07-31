@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+        <data noupdate="0">
+        <function model="res.users.password.expiry" name="sync_existing_users"/>
+        </data>
+        <record id="wt_password_expiration_inherit_res_config_settings_view_form" model="ir.ui.view">
+            <field name="name">wt.password.expiration.inherit.res.config.settings.view.form</field>
+            <field name="model">res.config.settings</field>
+            <field name="inherit_id" ref="website.res_config_settings_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//block[@id='website_email_marketing']" position="after">
+                    <block title="Password Policy" id="password_expiration">
+                        <setting string="Password Expiration" help="Set the number of days after user's passwords will expire.">                            
+                            <div class="mt12">
+                                <span>
+                                    <field name="password_expiration" class="oe_inline" />
+                                    days.
+                                </span>
+                            </div>                         
+                        </setting>
+                        <setting string="Alert Password Expiration" help="Set the number of days before sending password expiration alert to users.">                            
+                            <div class="mt12">
+                                <span>
+                                    <field name="password_expiration_alert" class="oe_inline" />
+                                    days.
+                                </span>
+                            </div>                         
+                        </setting>
+                        <setting string="Minimum Password Length" help="Set the minimum length for user passwords.">                            
+                            <!-- <div class="mt12">
+                                <span>
+                                    <field name="password_minimum_length" class="oe_inline" />
+                                    characters.
+                                </span>         
+                            </div>  -->
+                            <group string="Password Complexity" class="mt16">
+                                <group>
+                                    <field name="password_upper"/>
+                                    <field name="password_lower"/>
+                                </group>
+                                <group>
+                                    <field name="password_numeric"/>
+                                    <field name="password_special"/>
+                                </group>
+                            </group>
+                        </setting>
+                    </block>
+                </xpath>    
+            </field>
+        </record>
+</odoo>
+ 
+
+ 

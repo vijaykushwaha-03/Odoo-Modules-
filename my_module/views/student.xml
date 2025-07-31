@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem
+        id="menu_student"
+        name="STU_INFO"
+        />
+
+    <menuitem
+        id="menu_frontdesk"
+        name="front desk"
+        parent="menu_student"
+        />
+
+
+      <menuitem
+        id="menu_student"
+        name="front desk"
+        parent="menu_frontdesk"
+        />
+
+
+
+</odoo>

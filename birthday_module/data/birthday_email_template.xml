@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <!-- Birthday Wishes Email Template -->
+        <record id="email_template_birthday_wishes" model="mail.template">
+            <field name="name">Birthday Wishes</field>
+            <field name="model_id" ref="base.model_res_partner"/>
+            <field name="subject">Happy Birthday, {{ object.name }}! 🎉</field>
+            <field name="email_from">${(user.email)}</field>
+            <field name="email_to">${object.email}</field>
+            <field name="body_html">
+                <![CDATA[
+                <p>Dear {{ object.name }},</p>
+                <p>🎂 Happy Birthday! 🎉</p>
+                <p>We at YourCompany wish you a fantastic day filled with joy and happiness.</p>
+                <p>Best Regards,<br/>YourCompany Team</p>
+                ]]>
+            </field>
+        </record>
+
+        
+    </data>
+</odoo>

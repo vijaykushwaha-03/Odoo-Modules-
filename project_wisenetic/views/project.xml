@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_project_wisenetic_list" model="ir.ui.view">
+        <field name="name">view.project.wisenetic</field>
+        <field name="model">wisenetic.project</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name" string="Name"></field>
+                <field name="status" string="status"></field>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_project_wisenetic_form" model="ir.ui.view">
+        <field name="name">view.project.wisenetic</field>
+        <field name="model">wisenetic.project</field>
+        <field name="arch" type="xml">
+            <form string="project_form">
+                <sheet>
+                    <group>
+                    
+                        <field name="name" string="Name"></field>
+                        <field name="status" string="status"></field>
+                        <field name="progress"></field>                      
+                        <field name="last_update"></field>
+                                                                                                                        
+                        <!-- Prectice -->
+                        <!-- <field name="is_active"></field>
+                        <field name="not_active"></field> -->
+                        <!-- <field name="is_active" widget="radio" options="{'no_create': True}"/>                 -->
+
+                    </group>
+                    <notebook>
+                        <page name="tab" string="Tabs">
+                            <field name="task_ids">
+                                <list>
+                                    <field name="name"></field>
+                                    <field name="progress"></field>
+                                    <field name="status"></field>
+                                    <field name="write_date"></field>
+                                    <!-- <field name="last_update"></field> -->
+                                </list>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_project_wisenetic" model="ir.actions.act_window">
+        <field name="name">Project</field>
+        <field name="res_model">wisenetic.project</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+</odoo>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="layout_inherit_announcement_bar" inherit_id="website.layout">
+        <xpath expr="//header//nav[hasclass('navbar')]" position="after">
+            <div class="navbar-announcement o_editable">
+                <p>Your announcement text here</p>
+            </div>
+        </xpath>
+    </template>
+</odoo>

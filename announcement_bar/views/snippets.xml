@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="announcement_bar_snippet_options" inherit_id="web_editor.snippet_options" name="Announcement Bar Snippet Options">
+        <xpath expr="." position="inside">
+            <div data-selector="#wrapwrap > header .navbar-announcement"
+                 data-no-check="true"
+                 groups="website.group_website_designer">
+                <we-select string="Announcement Type" data-reload="/">
+                    <we-button data-customize-website-views="" data-name="option_announcement_none">None</we-button>
+                    <we-button data-customize-website-views="announcement_bar.option_announcement_text">Text</we-button>
+                    <we-button data-customize-website-views="announcement_bar.option_announcement_banner">Banner</we-button>
+                </we-select>
+                <we-input string="Background Color"
+                          class="o_we_sublevel_1"
+                          data-customize-website-variable="null"
+                          data-variable="announcement-bg-color"
+                          data-unit=""
+                          data-save-unit=""/>
+                <we-input string="Text Color"
+                          class="o_we_sublevel_1"
+                          data-customize-website-variable="null"
+                          data-variable="announcement-text-color"
+                          data-unit=""
+                          data-save-unit=""/>
+            </div>
+        </xpath>
+    </template>
+</odoo>

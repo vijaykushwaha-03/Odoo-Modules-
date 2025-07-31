@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="option_announcement_text" inherit_id="announcement_bar.navbar_announcement" name="Announcement Text">
+        <xpath expr="//div[@class='navbar-announcement']" position="replace">
+            <div class="navbar-announcement o_editable">
+                <p>Text Announcement</p>
+            </div>
+        </xpath>
+    </template>
+
+    <template id="option_announcement_banner" inherit_id="announcement_bar.navbar_announcement" name="Announcement Banner">
+        <xpath expr="//div[@class='navbar-announcement']" position="replace">
+            <div class="navbar-announcement o_editable">
+                <img src="/announcement_bar/static/src/img/banner.jpg" alt="Announcement Banner"/>
+            </div>
+        </xpath>
+    </template>
+</odoo>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+        <!-- List View -->
+
+    <record id="view_task_wisenetic_list" model="ir.ui.view">
+        <field name="name">view.task.wisenetic</field>
+        <field name="model">wisenetic.task</field>
+        <field name="arch" type="xml">
+        <list>
+            <field name="name"></field>
+            <field name="progress"></field>
+            <field name="status"></field>
+            <field name="project_id"></field>
+        </list>
+        </field>
+    </record>
+
+         <!-- Form View -->
+    
+    <record id="view_task_wisenetic_form" model="ir.ui.view">
+        <field name="name">view.task.wisenetic</field>
+        <field name="model">wisenetic.task</field>
+        <field name="arch" type="xml">
+            <form string="task_form">
+                <sheet>
+                    <group>
+                        <field name="name"></field>
+                        <field name="progress"></field>
+                        <field name="status" ></field>
+                        <field name="project_id"></field>
+                     </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_task_wisenetic" model="ir.actions.act_window">
+        <field name="name">Task</field>
+        <field name="res_model">wisenetic.task</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+</odoo>
