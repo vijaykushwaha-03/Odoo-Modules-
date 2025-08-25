@@ -1,1 +1,1 @@
-# wisenetic-odoo-addons
+# vijay-odoo-addons
