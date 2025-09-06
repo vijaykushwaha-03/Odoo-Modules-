@@ -1,7 +1,7 @@
 from odoo import models, fields, api
 
 class Project(models.Model):
-    _name = 'wisenetic.project'
+    _name = 'Odoo custom.project'
     
     name = fields.Char(string='Name', required=True)
     status = fields.Selection(
@@ -13,7 +13,7 @@ class Project(models.Model):
         string= 'Status',
         default = 'to_do'
     )      
-    task_ids = fields.One2many('wisenetic.task', 'project_id', string='Tasks')
+    task_ids = fields.One2many('Odoo custom.task', 'project_id', string='Tasks')
     progress = fields.Char(string="Progress" ,compute='calculate_percentage')
     
     last_update = fields.Char(string='last_update_task')

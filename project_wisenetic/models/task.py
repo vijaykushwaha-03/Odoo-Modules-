@@ -1,7 +1,7 @@
 from odoo import models, fields, api, exceptions
 
 class Task(models.Model):
-    _name = 'wisenetic.task'
+    _name = 'Odoo custom.task'
     
     name = fields.Char(string='Name', required=True)
     progress = fields.Integer(string='progress', default=0)
@@ -14,8 +14,8 @@ class Task(models.Model):
         default="to_do",
     )
 
-    project_id = fields.Many2one('wisenetic.project', string="Project")
-    #project_id = fields.Many2one('wisenetic.project', string='Project')
+    project_id = fields.Many2one('Odoo custom.project', string="Project")
+    #project_id = fields.Many2one('Odoo custom.project', string='Project')
  
 
     @api.onchange('progress')

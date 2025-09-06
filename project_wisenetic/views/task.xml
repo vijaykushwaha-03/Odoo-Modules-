@@ -3,9 +3,9 @@
 
         <!-- List View -->
 
-    <record id="view_task_wisenetic_list" model="ir.ui.view">
-        <field name="name">view.task.wisenetic</field>
-        <field name="model">wisenetic.task</field>
+    <record id="view_task_Odoo custom_list" model="ir.ui.view">
+        <field name="name">view.task.Odoo custom</field>
+        <field name="model">Odoo custom.task</field>
         <field name="arch" type="xml">
         <list>
             <field name="name"></field>
@@ -18,9 +18,9 @@
 
          <!-- Form View -->
     
-    <record id="view_task_wisenetic_form" model="ir.ui.view">
-        <field name="name">view.task.wisenetic</field>
-        <field name="model">wisenetic.task</field>
+    <record id="view_task_Odoo custom_form" model="ir.ui.view">
+        <field name="name">view.task.Odoo custom</field>
+        <field name="model">Odoo custom.task</field>
         <field name="arch" type="xml">
             <form string="task_form">
                 <sheet>
@@ -35,9 +35,9 @@
         </field>
     </record>
 
-    <record id="action_task_wisenetic" model="ir.actions.act_window">
+    <record id="action_task_Odoo custom" model="ir.actions.act_window">
         <field name="name">Task</field>
-        <field name="res_model">wisenetic.task</field>
+        <field name="res_model">Odoo custom.task</field>
         <field name="view_mode">list,form</field>
     </record>
 

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <menuitem id="demo_project_menu_roott"
+        name="Odoo custom-1"        
+        sequence="30">    
+
+        <menuitem id="demo_projects"            
+            sequence="10"
+            action="action_projects_demo">
+        </menuitem>
+
+        <menuitem id="demo_task"            
+            sequence="20"
+            action="action_task">
+        </menuitem>        
+    </menuitem>
+</odoo>

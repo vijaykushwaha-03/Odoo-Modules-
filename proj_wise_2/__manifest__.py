@@ -1,6 +1,6 @@
 {
-    "name":"wise_proj_2",
-    "author":"wise_pro",
+    "name":"demo_proj_2",
+    "author":"demo_pro",
     "license":"LGPL-3", 
     "version":"1.0",
     'depends': ['sale'],

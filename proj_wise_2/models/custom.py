@@ -13,7 +13,7 @@ class Custom(models.Model):
  
     @api.depends_context('uid')
     def _compute_cash_enabled(self):
-        param_value = self.env['ir.config_parameter'].sudo().get_param('proj_wise_2.cash')
+        param_value = self.env['ir.config_parameter'].sudo().get_param('proj_demo_2.cash')
         # print("=============",param_value)
         for record in self:
             record.cash_enabled = param_value == 'True'
@@ -58,7 +58,7 @@ class Connectors(models.TransientModel):
         Override set_values to save the cash setting in ir.config_parameter.
         """
         super(Connectors, self).set_values()
-        self.env['ir.config_parameter'].sudo().set_param('proj_wise_2.cash', self.cash)
+        self.env['ir.config_parameter'].sudo().set_param('proj_demo_2.cash', self.cash)
 
     @api.model
     def get_values(self):
@@ -66,7 +66,7 @@ class Connectors(models.TransientModel):
         Override get_values to retrieve the cash setting from ir.config_parameter.
         """
         res = super(Connectors, self).get_values()
-        res['cash'] = self.env['ir.config_parameter'].sudo().get_param('proj_wise_2.cash', default='False') == 'True'
+        res['cash'] = self.env['ir.config_parameter'].sudo().get_param('proj_demo_2.cash', default='False') == 'True'
         # print("==========>>>",res)
         return res
         

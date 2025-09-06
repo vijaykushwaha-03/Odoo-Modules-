@@ -5,9 +5,9 @@
     'summary': 'Smart Alerts On Any Model Based on Different Conditions',
     'description': """ Admin Can create Alert configuration based on different conditions.
     With different types of Alert""",
-    'author': 'Wisenetic Technology',
-    'company': 'Wisenetic Technology',
-    'maintainer': 'Wisenetic Technology',
+    'author': 'Odoo custom Technology',
+    'company': 'Odoo custom Technology',
+    'maintainer': 'Odoo custom Technology',
     'website': 'https://www.cybrosys.com',
     'depends': ['base'],
     'uninstall_hook': 'uninstall_hook',

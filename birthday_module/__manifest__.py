@@ -1,6 +1,6 @@
 {
     "name":"Birthday-Wishes",
-    "author":"wisenetic",
+    "author":"Odoo custom",
     "license":"LGPL-3", 
     "version":"1.0",
     'depends': ['mail'],
